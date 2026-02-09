@@ -25,3 +25,22 @@ body {
 	padding: 0 24px;
 	line-height: 1.7;
 }
+
+.lang {
+	color: #fff;
+}
+
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.lang a {
+	color: #fff;
+	text-decoration: none;
+	margin: 0 8px;
+}
+
