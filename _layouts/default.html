@@ -4,13 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+  {% assign site_title_en = site.title | default: "Dr. Fei Math" %}
+  {% assign site_title_hans = "纽约费博士" %}
+  {% assign site_title_hant = "紐約費博士" %}
+
+  {% if page.lang == "zh-hans" %}
+    {% assign site_title = site_title_hans %}
+  {% elsif page.lang == "zh-hant" %}
+    {% assign site_title = site_title_hant %}
+  {% else %}
+    {% assign site_title = site_title_en %}
+  {% endif %}
+
   <title>
     {% if page.title %}
-      {{ page.title }} | {{ site.title }}
+      {{ page.title }} | {{ site_title }}
     {% else %}
-      {{ site.title }}
+      {{ site_title }}
     {% endif %}
   </title>
+  
   
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>

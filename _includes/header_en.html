@@ -1,16 +1,63 @@
 <header class="site-header">
+  {% assign lang = page.lang | default: 'en' %}
+
+  {%- if lang == 'zh-hans' -%}
+    {% assign home = '/zh-hans/' %}
+    {% assign courses = '/zh-hans/courses/' %}
+    {% assign about = '/zh-hans/about/' %}
+    {% assign contact = '/zh-hans/contact/' %}
+    {% assign t_brand = '纽约费博士' %}
+    {% assign t_courses = '课程' %}
+    {% assign t_about = '关于我' %}
+    {% assign t_contact = '联系' %}
+
+  {%- elsif lang == 'zh-hant' -%}
+    {% assign home = '/zh-hant/' %}
+    {% assign courses = '/zh-hant/courses/' %}
+    {% assign about = '/zh-hant/about/' %}
+    {% assign contact = '/zh-hant/contact/' %}
+    {% assign t_brand = '紐約費博士' %}
+    {% assign t_courses = '課程' %}
+    {% assign t_about = '關於我' %}
+    {% assign t_contact = '聯絡' %}
+
+  {%- else -%}
+    {% assign home = '/en/' %}
+    {% assign courses = '/en/courses/' %}
+    {% assign about = '/en/about/' %}
+    {% assign contact = '/en/contact/' %}
+    {% assign t_brand = 'Dr. Fei Math' %}
+    {% assign t_courses = 'Courses' %}
+    {% assign t_about = 'About Me' %}
+    {% assign t_contact = 'Contact' %}
+  {%- endif -%}
+
   <nav class="nav">
     <div class="nav-left">
-      <a href="{{ '/en/' | relative_url }}">Dr Fei Math Tutoring</a>
-      <a href="{{ '/en/courses/' | relative_url }}">courses</a>
-      <a href="{{ '/en/about/' | relative_url }}">about me</a>
-      <a href="{{ '/en/contact/' | relative_url }}">contact</a>
+      <a href="{{ home | relative_url }}">{{ t_brand }}</a>
+      <a href="{{ courses | relative_url }}">{{ t_courses }}</a>
+      <a href="{{ about | relative_url }}">{{ t_about }}</a>
+      <a href="{{ contact | relative_url }}">{{ t_contact }}</a>
     </div>
 
     <div class="lang">
-      <a href="{{ '/zh-hans/' | relative_url }}">中文</a>
+      <a href="{{ '/en/' | relative_url }}"
+         {% if lang == 'en' %}style="font-weight:600;"{% endif %}>
+         EN
+      </a>
       <span>|</span>
-      <a href="{{ '/en/' | relative_url }}">EN</a>
+
+      <a href="{{ '/zh-hans/' | relative_url }}"
+         {% if lang == 'zh-hans' %}style="font-weight:600;"{% endif %}>
+         简中
+      </a>
+      <span>|</span>
+
+      <a href="{{ '/zh-hant/' | relative_url }}"
+         {% if lang == 'zh-hant' %}style="font-weight:600;"{% endif %}>
+         繁中
+      </a>
     </div>
   </nav>
 </header>
+
