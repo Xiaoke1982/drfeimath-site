@@ -1,7 +1,8 @@
-/* 去掉浏览器默认边距 */
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
 }
 
 /* 顶部黑色导航条 */
