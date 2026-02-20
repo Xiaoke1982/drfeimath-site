@@ -28,7 +28,7 @@ body {
 
 /* Brand bigger */
 .nav-left a.brand {
-  font-family: "Permanent Marker";
+  font-family: "Permanent Marker", cursive;
   font-size: 32px;
   letter-spacing: -0.2px;
   color: #e8e8e8;
