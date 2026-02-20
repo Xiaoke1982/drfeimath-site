@@ -24,7 +24,7 @@
 
   <nav class="nav">
     <div class="nav-left">
-      <a href="{{ home | relative_url }}">{{ t_brand }}</a>
+      <a href="{{ home | relative_url }}" class="brand">{{ t_brand }}</a>
       <a href="{{ courses | relative_url }}">{{ t_courses }}</a>
       <a href="{{ about | relative_url }}">{{ t_about }}</a>
       <a href="{{ contact | relative_url }}">{{ t_contact }}</a>
@@ -39,7 +39,7 @@
 
       <a href="{{ '/zh-hans/' | relative_url }}"
          {% if lang == 'zh-hans' %}style="font-weight:600;"{% endif %}>
-         简中
+         中文
       </a>
     </div>
   </nav>
