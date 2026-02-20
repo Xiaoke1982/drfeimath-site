@@ -28,10 +28,11 @@ body {
 
 /* Brand bigger */
 .nav-left a.brand {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  font-size: 40px;     /* 关键：必须明显大 */
-  font-weight: 300;    /* 轻字重 = 冷感 */
-  letter-spacing: 4px; /* 大字距 = 极简高级感 */
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;      /* 律所级字号 */
+  font-weight: 400;     /* 轻，不要粗 */
+  letter-spacing: 6px;  /* 关键：高级感核心 */
+  text-transform: uppercase;
 }
 
 /* 语言切换区域整体 */
