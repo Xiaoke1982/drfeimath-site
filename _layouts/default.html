@@ -6,12 +6,9 @@
   
   {% assign site_title_en = site.title | default: "Dr. Fei Math" %}
   {% assign site_title_hans = "纽约费博士" %}
-  {% assign site_title_hant = "紐約費博士" %}
 
   {% if page.lang == "zh-hans" %}
     {% assign site_title = site_title_hans %}
-  {% elsif page.lang == "zh-hant" %}
-    {% assign site_title = site_title_hant %}
   {% else %}
     {% assign site_title = site_title_en %}
   {% endif %}
@@ -29,7 +26,7 @@
 </head>
 
 <body>
-  {% include header_en.html %}
+  {% include header.html %}
 
   {{ content }}
 </body>

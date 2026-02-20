@@ -11,16 +11,6 @@
     {% assign t_about = '关于我' %}
     {% assign t_contact = '联系' %}
 
-  {%- elsif lang == 'zh-hant' -%}
-    {% assign home = '/zh-hant/' %}
-    {% assign courses = '/zh-hant/courses/' %}
-    {% assign about = '/zh-hant/about/' %}
-    {% assign contact = '/zh-hant/contact/' %}
-    {% assign t_brand = '紐約費博士' %}
-    {% assign t_courses = '課程' %}
-    {% assign t_about = '關於我' %}
-    {% assign t_contact = '聯絡' %}
-
   {%- else -%}
     {% assign home = '/en/' %}
     {% assign courses = '/en/courses/' %}
@@ -51,13 +41,6 @@
          {% if lang == 'zh-hans' %}style="font-weight:600;"{% endif %}>
          简中
       </a>
-      <span>|</span>
-
-      <a href="{{ '/zh-hant/' | relative_url }}"
-         {% if lang == 'zh-hant' %}style="font-weight:600;"{% endif %}>
-         繁中
-      </a>
     </div>
   </nav>
 </header>
-
