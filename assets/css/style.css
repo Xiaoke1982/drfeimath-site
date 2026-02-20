@@ -28,11 +28,11 @@ body {
 
 /* Brand bigger */
 .nav-left a.brand {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 42px;      /* 律所级字号 */
-  font-weight: 400;     /* 轻，不要粗 */
-  letter-spacing: 6px;  /* 关键：高级感核心 */
-  text-transform: uppercase;
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: none;
 }
 
 /* 语言切换区域整体 */
