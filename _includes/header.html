@@ -34,31 +34,25 @@
 
   <nav class="nav">
     <div class="nav-top">
-      <div class="nav-left">
-        <a href="{{ home | relative_url }}" class="brand">{{ t_brand }}</a>
-      </div>
+      <a href="{{ home | relative_url }}" class="brand">{{ t_brand }}</a>
 
       <div class="nav-right">
         <div class="lang">
           <a href="{{ '/en/' | relative_url }}"
-             {% if lang == 'en' %}style="font-weight:600;"{% endif %}>
-             EN
-          </a>
+             {% if lang == 'en' %}style="font-weight:600;"{% endif %}>EN</a>
           <span>|</span>
-
           <a href="{{ '/zh-hans/' | relative_url }}"
-             {% if lang == 'zh-hans' %}style="font-weight:600;"{% endif %}>
-             中文
-          </a>
+             {% if lang == 'zh-hans' %}style="font-weight:600;"{% endif %}>中文</a>
         </div>
 
-        <!-- 汉堡按钮（手机显示，桌面隐藏） -->
         <button class="nav-toggle"
                 type="button"
                 aria-label="Open menu"
                 aria-controls="mobile-menu"
                 aria-expanded="false">
-          ☰
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </button>
       </div>
     </div>
