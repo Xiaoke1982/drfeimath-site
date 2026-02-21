@@ -5,28 +5,46 @@
     {% assign home = '/zh-hans/' %}
     {% assign courses = '/zh-hans/courses/' %}
     {% assign about = '/zh-hans/about/' %}
+    {% assign qa = '/zh-hans/qa/' %}
+    {% assign resources = '/zh-hans/resources/' %}
+    {% assign testimonials = '/zh-hans/testimonials/' %}
     {% assign contact = '/zh-hans/contact/' %}
+
     {% assign t_brand = '纽约费博士' %}
     {% assign t_courses = '课程' %}
     {% assign t_about = '关于我' %}
+    {% assign t_qa = '问答' %}
+    {% assign t_resources = '资源' %}
+    {% assign t_testimonials = '评价' %}
     {% assign t_contact = '联系' %}
 
   {%- else -%}
     {% assign home = '/en/' %}
     {% assign courses = '/en/courses/' %}
     {% assign about = '/en/about/' %}
+    {% assign qa = '/en/qa/' %}
+    {% assign resources = '/en/resources/' %}
+    {% assign testimonials = '/en/testimonials/' %}
     {% assign contact = '/en/contact/' %}
+
     {% assign t_brand = 'Dr. Fei Math' %}
     {% assign t_courses = 'Courses' %}
     {% assign t_about = 'About' %}
+    {% assign t_qa = 'Q&A' %}
+    {% assign t_resources = 'Resources' %}
+    {% assign t_testimonials = 'Testimonials' %}
     {% assign t_contact = 'Contact' %}
   {%- endif -%}
 
   <nav class="nav">
     <div class="nav-left">
       <a href="{{ home | relative_url }}" class="brand">{{ t_brand }}</a>
+
       <a href="{{ courses | relative_url }}">{{ t_courses }}</a>
       <a href="{{ about | relative_url }}">{{ t_about }}</a>
+      <a href="{{ qa | relative_url }}">{{ t_qa }}</a>
+      <a href="{{ resources | relative_url }}">{{ t_resources }}</a>
+      <a href="{{ testimonials | relative_url }}">{{ t_testimonials }}</a>
       <a href="{{ contact | relative_url }}">{{ t_contact }}</a>
     </div>
 
