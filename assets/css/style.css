@@ -27,12 +27,13 @@ body {
 }
 
 /* Brand bigger */
+/* 用 Walter Turncoat 做品牌 */
 .nav-left a.brand {
-  font-family: "Permanent Marker", cursive;
-  font-size: 32px;
-  letter-spacing: -0.2px;
-  color: #e8e8e8;
-  font-weight: 500;   /* 这里变粗 */
+  font-family: "Walter Turncoat", cursive;
+  font-size: 32px;         /* 适中字号 */
+  letter-spacing: 0px;     /* 不要拉太开 */
+  color: #e8e8e8;          /* 柔灰白，比纯白高级 */
+  font-weight: 400;        /* 默认就好 */
 }
 
 /* 语言切换区域整体 */
