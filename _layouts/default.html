@@ -41,14 +41,6 @@
         btn.setAttribute('aria-expanded', String(!isOpen));
         menu.hidden = isOpen;
       });
-
-      // 点菜单链接后自动收起（体验更像真实网站）
-      menu.addEventListener('click', function (e) {
-        if (e.target && e.target.tagName === 'A') {
-          btn.setAttribute('aria-expanded', 'false');
-          menu.hidden = true;
-        }
-      });
     })();
   </script>
 </body>
