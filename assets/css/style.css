@@ -56,7 +56,7 @@ body {
 /* 语言 */
 .lang {
   color: #fff;
-  font-size: 18px;           /* 变大 */
+  font-size: 15px;           /* 变大 */
   white-space: nowrap;
   display: flex;
   align-items: flex-end;     /* 下沿对齐 */
