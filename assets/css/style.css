@@ -56,17 +56,22 @@ body {
 /* 语言 */
 .lang {
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;           /* 变大 */
   white-space: nowrap;
+  display: flex;
+  align-items: flex-end;     /* 下沿对齐 */
+  gap: 4px;                  /* 控制整体间距 */
 }
 
 .lang a {
   color: inherit;
   text-decoration: none;
-  margin: 0 6px;
 }
 
-.lang span { opacity: 0.6; }
+.lang span {
+  opacity: 0.6;
+  margin: 0 2px;             /* 让 | 靠近两边 */
+}
 
 /* 汉堡按钮（默认隐藏） */
 .nav-toggle {
