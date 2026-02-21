@@ -203,33 +203,36 @@ body {
 
 /* ===== 手机端：只显示品牌 + 语言 + 汉堡；隐藏桌面横向导航 ===== */
 @media (max-width: 640px) {
+
+  /* 顶部整体竖排 */
+  .nav-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* 第一行：品牌 + 语言 */
+  .nav-right {
+    align-self: flex-end;
+  }
+
+  /* 汉堡按钮单独一行 */
+  .nav-toggle {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  /* 隐藏桌面横向菜单 */
   .desktop-nav {
     display: none;
   }
 
-  .nav-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* 手机展开菜单：竖排，像抽屉 */
+  /* 手机菜单展开样式 */
   .mobile-menu {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     padding-top: 12px;
-  }
-
-  .mobile-menu a {
-    display: block;
-    padding: 10px 2px;
-    border-top: 1px solid rgba(255,255,255,0.12);
-    font-size: 18px;
-  }
-
-  .mobile-menu a:first-child {
-    border-top: 1px solid rgba(255,255,255,0.22);
   }
 }
 
