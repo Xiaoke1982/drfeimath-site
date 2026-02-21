@@ -35,8 +35,8 @@ body {
   letter-spacing: -0.4px;
   font-weight: 400;
 
-  display: inline-block;
-  transform: scaleY(1.08);  /* 竖向拉高 8% */
+  /*display: inline-block;*/
+  /*transform: scaleY(1.08);*/  /* 竖向拉高 8% */
 }
 
 /* 语言切换区域整体 */
