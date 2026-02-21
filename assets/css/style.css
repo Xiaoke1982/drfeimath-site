@@ -42,7 +42,7 @@ body {
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-left: 60px;
+  margin-left: 140px !important;
 }
 
 .desktop-links a {
