@@ -24,13 +24,14 @@ body {
   text-decoration: none;
   margin-right: 20px;
   font-size: 14px;
+  font-family: "Indie Flower", cursive;
 }
 
 /* Brand bigger */
 /* 用 Walter Turncoat 做品牌 */
 .nav-left a.brand {
   font-family: "Walter Turncoat", cursive;
-  font-size: 36px;
+  font-size: 33px;
   color: #e8e8e8;
   letter-spacing: -0.6px;
   font-weight: 400;
