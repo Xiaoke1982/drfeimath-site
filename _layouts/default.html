@@ -30,5 +30,26 @@
   {% include header.html %}
 
   {{ content }}
+  <script>
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', function () {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        menu.hidden = isOpen;
+      });
+
+      // 点菜单链接后自动收起（体验更像真实网站）
+      menu.addEventListener('click', function (e) {
+        if (e.target && e.target.tagName === 'A') {
+          btn.setAttribute('aria-expanded', 'false');
+          menu.hidden = true;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

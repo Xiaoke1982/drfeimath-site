@@ -33,27 +33,52 @@
   {%- endif -%}
 
   <nav class="nav">
-    <div class="nav-left">
-      <a href="{{ home | relative_url }}" class="brand">{{ t_brand }}</a>
+    <div class="nav-top">
+      <div class="nav-left">
+        <a href="{{ home | relative_url }}" class="brand">{{ t_brand }}</a>
+      </div>
 
+      <div class="nav-right">
+        <div class="lang">
+          <a href="{{ '/en/' | relative_url }}"
+             {% if lang == 'en' %}style="font-weight:600;"{% endif %}>
+             EN
+          </a>
+          <span>|</span>
+
+          <a href="{{ '/zh-hans/' | relative_url }}"
+             {% if lang == 'zh-hans' %}style="font-weight:600;"{% endif %}>
+             中文
+          </a>
+        </div>
+
+        <!-- 汉堡按钮（手机显示，桌面隐藏） -->
+        <button class="nav-toggle"
+                type="button"
+                aria-label="Open menu"
+                aria-controls="mobile-menu"
+                aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- 桌面导航（桌面显示，手机隐藏） -->
+    <div class="nav-links desktop-nav">
       <a href="{{ courses | relative_url }}">{{ t_courses }}</a>
       <a href="{{ about | relative_url }}">{{ t_about }}</a>
       <a href="{{ testimonials | relative_url }}">{{ t_testimonials }}</a>
-	  <a href="{{ qa | relative_url }}">{{ t_qa }}</a>
+      <a href="{{ qa | relative_url }}">{{ t_qa }}</a>
       <a href="{{ contact | relative_url }}">{{ t_contact }}</a>
     </div>
 
-    <div class="lang">
-      <a href="{{ '/en/' | relative_url }}"
-         {% if lang == 'en' %}style="font-weight:600;"{% endif %}>
-         EN
-      </a>
-      <span>|</span>
-
-      <a href="{{ '/zh-hans/' | relative_url }}"
-         {% if lang == 'zh-hans' %}style="font-weight:600;"{% endif %}>
-         中文
-      </a>
+    <!-- 手机菜单（默认隐藏，点☰展开） -->
+    <div id="mobile-menu" class="nav-links mobile-menu" hidden>
+      <a href="{{ courses | relative_url }}">{{ t_courses }}</a>
+      <a href="{{ about | relative_url }}">{{ t_about }}</a>
+      <a href="{{ testimonials | relative_url }}">{{ t_testimonials }}</a>
+      <a href="{{ qa | relative_url }}">{{ t_qa }}</a>
+      <a href="{{ contact | relative_url }}">{{ t_contact }}</a>
     </div>
   </nav>
 </header>
