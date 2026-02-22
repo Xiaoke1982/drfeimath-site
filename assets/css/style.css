@@ -252,3 +252,28 @@ html[lang="zh-hans"] .desktop-links a,
 html[lang="zh-hans"] .lang {
   line-height: 1;
 }
+
+
+/* ===== Mobile fix, keep EN/ZH header height consistent ===== */
+
+/* 桌面：保持你原来的固定高度（不动） */
+.site-header { height: 72px; }
+
+/* 手机：header 不锁死，让它能容纳展开菜单；但第一行仍锁住 72px */
+@media (max-width: 640px) {
+  .site-header { height: auto; }          /* 只在手机解除锁死 */
+  .nav-row { min-height: 72px; }          /* 仍保证“第一行”高度一致 */
+  .nav { position: relative; }
+
+  /* 汉堡按钮始终在上层，避免被盖住 */
+  .nav-toggle { position: relative; z-index: 1001; }
+
+  /* 菜单从 header 底部展开，不去盖按钮 */
+  .mobile-menu {
+    position: absolute;
+    top: 72px;   /* 精确从第一行下方展开 */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+}
