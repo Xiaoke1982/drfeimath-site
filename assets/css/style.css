@@ -257,3 +257,32 @@ html[lang="zh-hans"] .lang {
 }
 
 
+/* ===== FIX: mobile menu should be above page, not overlapping header ===== */
+@media (max-width: 640px) {
+
+  /* 1) 手机端 header 不锁死高度 & 不用 flex（否则菜单溢出会乱叠） */
+  .site-header{
+    height: auto !important;
+    min-height: 72px;
+    display: block !important;
+    align-items: stretch !important;
+    position: relative !important;
+    z-index: 9999 !important; /* header 永远在最上面 */
+  }
+
+  /* 2) 菜单也要在最上层（否则会被正文盖住） */
+  .mobile-menu{
+    position: relative !important;
+    z-index: 10000 !important;
+    background: #000; /* 确保不透明 */
+  }
+
+  /* 3) 汉堡按钮保持可点 */
+  .nav-toggle{
+    position: relative !important;
+    z-index: 10001 !important;
+    margin-top: 0 !important;
+  }
+}
+
+
