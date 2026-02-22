@@ -47,13 +47,11 @@
         </div>
       </div>
 
-      <div class="lang">
-        <a href="{{ '/en/' | relative_url }}"
-           {% if lang == 'en' %}style="font-weight:600;"{% endif %}>EN</a>
-        <span>|</span>
-        <a href="{{ '/zh-hans/' | relative_url }}"
-           {% if lang == 'zh-hans' %}style="font-weight:600;"{% endif %}>中文</a>
-      </div>
+	  <div class="lang">
+	    <a href="{{ '/en/' | relative_url }}" class="{% if lang == 'en' %}is-active{% endif %}">EN</a>
+	    <span>|</span>
+	    <a href="{{ '/zh-hans/' | relative_url }}" class="{% if lang == 'zh-hans' %}is-active{% endif %}">中文</a>
+	  </div>
     </div>
 
     <!-- 第二行（手机才显示）：汉堡在品牌下方 -->

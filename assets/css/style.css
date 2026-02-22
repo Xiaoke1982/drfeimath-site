@@ -72,10 +72,16 @@ body {
 .lang a {
   color: inherit;
   text-decoration: none;
+  font-weight: 400;     /* ✅ 永远固定，不会变宽 */
 }
 
 .lang span {
   opacity: 0.6;
+}
+
+.lang a.is-active {
+  text-decoration: underline;          /* ✅ 用下划线表示选中 */
+  text-underline-offset: 4px;
 }
 
 /* 导航区域统一行高，避免不同字体把黑条撑出差异 */
