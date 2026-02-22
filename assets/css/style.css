@@ -41,7 +41,7 @@ body {
 .desktop-links {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 24px;
   margin-left: 80px !important;
 }
 
@@ -70,7 +70,6 @@ body {
 
 .lang span {
   opacity: 0.6;
-  margin: 0 2px;             /* 让 | 靠近两边 */
 }
 
 /* 汉堡按钮（默认隐藏） */
