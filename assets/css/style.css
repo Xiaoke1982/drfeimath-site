@@ -194,8 +194,6 @@ body {
   color: #fff;
 }
 
-/* ================= MOBILE ================= */
-
 @media (max-width: 640px) {
 
   .site-header {
@@ -207,9 +205,23 @@ body {
     display: none;
   }
 
-  /* 显示汉堡（在品牌下方） */
+  /* ✅ 汉堡：就在品牌正下方，不下移 */
   .nav-toggle {
     display: inline-flex;
+    margin-top: 0;   /* 关键：不下移 */
+  }
+
+  /* ✅ 手机菜单：保持正常文档流（不会盖住汉堡） */
+  .mobile-menu[hidden] { 
+    display: none; 
+  }
+
+  .mobile-menu {
+    margin-top: 10px;     /* 菜单和汉堡之间留点空 */
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    background: #000;
   }
 
   .hero {
@@ -224,7 +236,6 @@ body {
     font-size: 36px;
   }
 }
-
 
 /* 中文 brand 使用 Long Cang */
 html[lang="zh-hans"] .brand {
@@ -254,26 +265,3 @@ html[lang="zh-hans"] .lang {
 }
 
 
-/* ===== Mobile fix, keep EN/ZH header height consistent ===== */
-
-/* 桌面：保持你原来的固定高度（不动） */
-.site-header { height: 72px; }
-
-/* 手机：header 不锁死，让它能容纳展开菜单；但第一行仍锁住 72px */
-@media (max-width: 640px) {
-  .site-header { height: auto; }          /* 只在手机解除锁死 */
-  .nav-row { min-height: 72px; }          /* 仍保证“第一行”高度一致 */
-  .nav { position: relative; }
-
-  /* 汉堡按钮始终在上层，避免被盖住 */
-  .nav-toggle { position: relative; z-index: 1001; }
-
-  /* 菜单从 header 底部展开，不去盖按钮 */
-  .mobile-menu {
-    position: absolute;
-    top: 72px;   /* 精确从第一行下方展开 */
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-}
