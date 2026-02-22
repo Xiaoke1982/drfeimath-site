@@ -42,7 +42,7 @@ body {
   display: flex;
   align-items: center;
   gap: 28px;
-  margin-left: 80px !important;
+  margin-left: 80px;
 }
 
 .desktop-links a {
@@ -59,7 +59,7 @@ body {
   font-size: 15px;           /* 变大 */
   white-space: nowrap;
   display: flex;
-  align-items: flex-end;     /* 下沿对齐 */
+  align-items: center;     /* 下沿对齐 */
   gap: 6px;                  /* 控制整体间距 */
 }
 
