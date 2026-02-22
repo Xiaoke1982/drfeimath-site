@@ -211,7 +211,7 @@ html[lang="zh-hans"] .brand {
 /* 中文导航链接：ZCOOL KuaiLe + 小一点 + 底部对齐 */
 html[lang="zh-hans"] .desktop-links a {
   font-family: "ZCOOL KuaiLe", cursive;
-  font-size: 18px;          /* 小一点：你要更小就 16px */
+  font-size: 22px;          /* 小一点：你要更小就 16px */
   letter-spacing: 1px;
 }
 
