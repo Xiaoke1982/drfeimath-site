@@ -60,6 +60,7 @@ body {
   white-space: nowrap;
   display: flex;
   gap: 6px;                  /* 控制整体间距 */
+  margin-right: 40px;
 }
 
 .lang a {
