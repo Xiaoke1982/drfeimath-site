@@ -9,7 +9,10 @@ body {
 
 .site-header {
   background: #000;
-  padding: 14px 24px;   /* 控制黑条厚度：中英文永远一致 */
+  height: 72px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
 }
 
 .nav { width: 100%; }
