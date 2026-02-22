@@ -9,11 +9,10 @@ body {
 
 .site-header {
   background: #000;
-  padding: 14px 24px;
-  height: 60px;           /* 固定高度 */
-  display: flex;
-  align-items: center;    /* 垂直居中内容 */
+  padding: 14px 24px;   /* 控制黑条厚度：中英文永远一致 */
 }
+
+.nav { width: 100%; }
 
 /* 第一行：品牌 + 桌面导航 + 语言 */
 .nav-row {
@@ -74,6 +73,13 @@ body {
 
 .lang span {
   opacity: 0.6;
+}
+
+/* 导航区域统一行高，避免不同字体把黑条撑出差异 */
+.brand,
+.desktop-links a,
+.lang {
+  line-height: 1;
 }
 
 /* 汉堡按钮（默认隐藏） */
