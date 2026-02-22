@@ -199,3 +199,11 @@ body {
     font-size: 36px;
   }
 }
+
+
+/* 中文 brand 使用 Long Cang */
+html[lang="zh-hans"] .brand {
+  font-family: "Long Cang", cursive;
+  font-size: 42px;
+  letter-spacing: 2px;
+}
