@@ -41,7 +41,7 @@ body {
 .desktop-links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 28px;
   margin-left: 80px !important;
 }
 
@@ -60,7 +60,7 @@ body {
   white-space: nowrap;
   display: flex;
   align-items: flex-end;     /* 下沿对齐 */
-  gap: 4px;                  /* 控制整体间距 */
+  gap: 6px;                  /* 控制整体间距 */
 }
 
 .lang a {
