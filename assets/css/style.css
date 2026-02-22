@@ -196,45 +196,37 @@ body {
 
 @media (max-width: 640px) {
 
+  /* ✅ 手机端：别让 header 用 flex 锁死高度/对齐方式 */
   .site-header {
+    height: auto;            /* 允许展开 */
+    min-height: 72px;        /* 视觉上仍不矮于 72 */
     padding: 12px 16px;
+    display: block;          /* 关键：别用 flex 顶着内容 */
   }
 
   /* 桌面导航隐藏 */
-  .desktop-links {
-    display: none;
-  }
+  .desktop-links { display: none; }
 
   /* ✅ 汉堡：就在品牌正下方，不下移 */
   .nav-toggle {
     display: inline-flex;
-    margin-top: 0;   /* 关键：不下移 */
+    margin-top: 0;
   }
 
-  /* ✅ 手机菜单：保持正常文档流（不会盖住汉堡） */
-  .mobile-menu[hidden] { 
-    display: none; 
-  }
+  /* ✅ 菜单：正常排版在汉堡下面（不会盖住汉堡） */
+  .mobile-menu[hidden] { display: none; }
 
   .mobile-menu {
-    margin-top: 10px;     /* 菜单和汉堡之间留点空 */
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     padding: 0 24px;
     background: #000;
   }
 
-  .hero {
-    padding: 100px 20px;
-  }
-
-  .hero-content {
-    margin-left: 0;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
+  .hero { padding: 100px 20px; }
+  .hero-content { margin-left: 0; }
+  .hero h1 { font-size: 36px; }
 }
 
 /* 中文 brand 使用 Long Cang */
