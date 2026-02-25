@@ -285,4 +285,47 @@ html[lang="zh-hans"] .lang {
   }
 }
 
+/* ===== Homepage Section Layout ===== */
+
+.section {
+  padding: 100px 24px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.section-text {
+  max-width: 700px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.section-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.course-list {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.quote {
+  max-width: 700px;
+}
 
