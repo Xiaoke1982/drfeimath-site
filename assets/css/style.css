@@ -285,47 +285,112 @@ html[lang="zh-hans"] .lang {
   }
 }
 
-/* ===== Homepage Section Layout ===== */
+/* ===== Homepage: visual design pass (no content changes) ===== */
 
-.section {
-  padding: 100px 24px;
+:root{
+  --container: 860px;
+  --gutter: 24px;
+  --muted: #666;
+  --line: rgba(0,0,0,0.08);
+  --soft: #f6f6f6;
 }
 
-.container {
-  max-width: 900px;
+/* 统一版心：所有 section 都同一左边缘 */
+.section .container,
+.hero .hero-content{
+  max-width: var(--container);
   margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
 }
 
-.section-title {
-  font-size: 32px;
-  margin-bottom: 40px;
+/* 取消 hero 原来 8% 的左缩进（保持同一版心） */
+.hero-content{
+  margin-left: auto !important;
 }
 
-.section-text {
-  max-width: 700px;
-  line-height: 1.8;
-  margin-bottom: 24px;
+/* 统一 section 节奏 */
+.section{
+  padding: 84px 0;
+  border-top: 1px solid var(--line);
 }
 
-.section-link {
+.home-hero{
+  padding: 150px 0 110px 0;
+  border-top: none;
+}
+
+/* 标题层级：更“高级”的节奏 */
+.section-title{
+  font-size: 34px;
+  letter-spacing: -0.3px;
+  margin: 0 0 28px 0;
+}
+
+.section-text{
+  max-width: 680px;
+  color: var(--muted);
+  line-height: 1.85;
+  margin: 0 0 18px 0;
+}
+
+/* Featured Courses 列表：去掉默认 bullet，做成干净列表 */
+.course-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 520px;
+}
+
+.course-list li{
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 16px;
+}
+
+/* links：统一为黑色系，不要默认紫色 */
+.section-link{
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 18px;
   font-size: 15px;
+  color: #111;
   text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  padding-bottom: 2px;
 }
 
-.course-list {
-  margin-bottom: 20px;
-  padding-left: 20px;
+.section-link:hover{
+  border-bottom-color: rgba(0,0,0,0.7);
 }
 
-.quotes {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+/* Testimonials：做成引用卡片，但保持极简 */
+.quotes{
+  display: grid;
+  gap: 22px;
+  max-width: 720px;
 }
 
-.quote {
-  max-width: 700px;
+.quote{
+  margin: 0;
+  padding: 18px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
 }
 
+.quote p{
+  margin: 0 0 12px 0;
+  line-height: 1.75;
+  color: #222;
+}
+
+.quote footer{
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* 交替轻灰背景：增强分区的“设计感” */
+.featured-courses,
+.testimonials{
+  background: var(--soft);
+}
