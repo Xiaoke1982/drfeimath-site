@@ -399,46 +399,47 @@ html[lang="zh-hans"] .lang {
 
 /* ===== EN Home Hero Background Image ===== */
 
-/* ===== HERO IMAGE SWITCH ===== */
-
-/* 默认：桌面 */
-/* ===== EN Home Hero: desktop fix (height follows width) ===== */
-/* ===== HERO: NEVER CROP IMAGE ===== */
+/* ===== HERO: NO BLACK BARS (fills screen) ===== */
 
 .home-hero{
   background-image: url("../image/hero-home-en-desktop.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
 
-  /* ✅ 永远完整显示图片 */
-  background-size: contain;
+  /* ✅ 填满容器：不会有黑边（但会裁切） */
+  background-size: cover;
 
-  /* ✅ 根据宽度自动计算高度（16:9比例） */
+  /* ✅ 你可以调这个来“裁切少一点/多一点”（往上挪=露更多上方） */
+  background-position: center 45%;
+
   height: clamp(420px, 56.25vw, 700px);
 
-  /* contain 会产生空白，用黑色填充更自然 */
   background-color: #000;
 
   position: relative;
   color: #fff;
 
-  /* 覆盖 .hero 原有 padding */
+  /* 覆盖 .hero 原有大 padding，避免内容挤爆 */
   padding: 0 !important;
 
   display: flex;
   align-items: center;
 }
 
-/* 手机使用独立图片，也完整显示 */
+/* 手机：用手机图，同样填满不留边 */
 @media (max-width: 768px){
   .home-hero{
     background-image: url("/assets/image/hero-home-en-mobile.jpg");
-    background-size: contain;
-    background-position: center center;
+    background-size: cover;
+
+    /* ✅ 手机那点黑边通常是 position/比例导致的，cover + 微调位置能解决 */
+    background-position: center 50%;
+
+    /* ✅ 你说“调短一点”：手机 hero 高度稍微短一点 */
+    height: clamp(360px, 110vw, 520px);
   }
 }
 
-/* 遮罩层 */
+/* 遮罩 */
 .home-hero::before{
   content:"";
   position:absolute;
@@ -450,12 +451,12 @@ html[lang="zh-hans"] .lang {
 .home-hero .hero-content{
   position: relative;
   z-index: 1;
+  width: 100%;
   max-width: var(--container);
   margin: 0 auto;
   padding-left: var(--gutter);
   padding-right: var(--gutter);
 }
-
 
 
 
