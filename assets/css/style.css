@@ -394,3 +394,30 @@ html[lang="zh-hans"] .lang {
 .testimonials{
   background: var(--soft);
 }
+
+
+
+/* ===== EN Home Hero Background Image ===== */
+
+.home-hero {
+  background-image: url("/assets/image/hero-home-en.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;   /* 让遮罩层能定位 */
+  color: #fff;          /* 背景暗的话文字用白 */
+}
+
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);  /* 0.35~0.6 之间后面可微调 */
+}
+
+.home-hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
