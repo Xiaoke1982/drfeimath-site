@@ -404,7 +404,7 @@ html[lang="zh-hans"] .lang {
 /* 默认：桌面 */
 /* ===== EN Home Hero: desktop fix (height follows width) ===== */
 .home-hero{
-  background-image: url("../image/hero-home-en-desktop.jpeg"); /* ←改成你的真实文件名/扩展名 */
+  background-image: url("../image/hero-home-en-desktop.jpg"); /* ←改成你的真实文件名/扩展名 */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 45%;
