@@ -402,11 +402,15 @@ html[lang="zh-hans"] .lang {
 /* ===== HERO IMAGE SWITCH ===== */
 
 /* 默认：桌面 */
+/* ===== EN Home Hero: desktop fix (height follows width) ===== */
 .home-hero{
-  background-image: url("/assets/image/hero-home-en-desktop.jpg");
+  background-image: url("../image/hero-home-en-desktop.jpeg"); /* ←改成你的真实文件名/扩展名 */
   background-size: cover;
-  background-position: center center;
   background-repeat: no-repeat;
+  background-position: center 45%;
+
+  /* ✅ 关键：高度跟着宽度走（接近16:9），并且有上下限 */
+  height: clamp(420px, 56.25vw, 620px);
 
   position: relative;
   color: #fff;
@@ -420,17 +424,19 @@ html[lang="zh-hans"] .lang {
   }
 }
 
-
-.home-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);  /* 0.35~0.6 之间后面可微调 */
+/* 遮罩 */
+.home-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.45);
 }
 
-.home-hero .hero-content {
+.home-hero .hero-content{
   position: relative;
   z-index: 1;
 }
+
+
 
 
