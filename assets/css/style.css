@@ -421,3 +421,54 @@ html[lang="zh-hans"] .lang {
   position: relative;
   z-index: 1;
 }
+
+
+/* ===== FIX HERO CROPPING (desktop + mobile) ===== */
+
+/* 1) 让首页 hero 用“高度”而不是 padding 撑开 */
+.home-hero{
+  padding: 0 !important;                 /* ✅ 关键：干掉之前的 hero padding */
+  min-height: 520px;                      /* 桌面最低高度 */
+  height: clamp(520px, 62vh, 680px);      /* ✅ 桌面高度：有上限下限 */
+  display: flex;
+  align-items: center;                    /* 文字垂直居中 */
+  background-size: cover;
+  background-position: center 25%;        /* ✅ 桌面更偏上，少裁掉“Exit” */
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+/* 遮罩保持 */
+.home-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.45);
+}
+.home-hero .hero-content{
+  position: relative;
+  z-index: 1;
+
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  transform: translateY(18px);           /* ✅ 文字整体往下一点（你要的） */
+}
+
+/* 2) 手机：hero 不要那么高，别显示太多上下多余部分 */
+@media (max-width: 640px){
+  .home-hero{
+    min-height: 420px;
+    height: 56vh;                         /* ✅ 手机更紧凑 */
+    background-position: center 35%;      /* ✅ 手机更往下点，裁掉上面多余天花板 */
+    align-items: flex-end;                /* 文字靠下更舒服 */
+    padding-bottom: 56px !important;      /* 给文字底部留空间 */
+  }
+
+  .home-hero .hero-content{
+    transform: translateY(0);
+    padding: 0 20px;
+  }
+}
