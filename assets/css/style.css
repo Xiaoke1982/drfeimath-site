@@ -403,28 +403,42 @@ html[lang="zh-hans"] .lang {
 
 /* 默认：桌面 */
 /* ===== EN Home Hero: desktop fix (height follows width) ===== */
-.home-hero{
-  background-image: url("../image/hero-home-en-desktop.jpg"); /* ←改成你的真实文件名/扩展名 */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 45%;
+/* ===== HERO: NEVER CROP IMAGE ===== */
 
-  /* ✅ 关键：高度跟着宽度走（接近16:9），并且有上下限 */
-  height: clamp(420px, 56.25vw, 620px);
+.home-hero{
+  background-image: url("../image/hero-home-en-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  /* ✅ 永远完整显示图片 */
+  background-size: contain;
+
+  /* ✅ 根据宽度自动计算高度（16:9比例） */
+  height: clamp(420px, 56.25vw, 700px);
+
+  /* contain 会产生空白，用黑色填充更自然 */
+  background-color: #000;
 
   position: relative;
   color: #fff;
+
+  /* 覆盖 .hero 原有 padding */
+  padding: 0 !important;
+
+  display: flex;
+  align-items: center;
 }
 
-/* 手机自动切换 */
+/* 手机使用独立图片，也完整显示 */
 @media (max-width: 768px){
   .home-hero{
     background-image: url("/assets/image/hero-home-en-mobile.jpg");
+    background-size: contain;
     background-position: center center;
   }
 }
 
-/* 遮罩 */
+/* 遮罩层 */
 .home-hero::before{
   content:"";
   position:absolute;
@@ -432,9 +446,14 @@ html[lang="zh-hans"] .lang {
   background: rgba(0,0,0,0.45);
 }
 
+/* 文字层 */
 .home-hero .hero-content{
   position: relative;
   z-index: 1;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
 }
 
 
