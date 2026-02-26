@@ -399,14 +399,25 @@ html[lang="zh-hans"] .lang {
 
 /* ===== EN Home Hero Background Image ===== */
 
-.home-hero {
-  background-image: url("/assets/image/hero-home-en.jpg");
+/* ===== HERO IMAGE SWITCH ===== */
+
+/* 默认：桌面 */
+.home-hero{
+  background-image: url("/assets/image/hero-home-en-desktop.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
 
-  position: relative;   /* 让遮罩层能定位 */
-  color: #fff;          /* 背景暗的话文字用白 */
+  position: relative;
+  color: #fff;
+}
+
+/* 手机自动切换 */
+@media (max-width: 768px){
+  .home-hero{
+    background-image: url("/assets/image/hero-home-en-mobile.jpg");
+    background-position: center center;
+  }
 }
 
 
@@ -423,50 +434,3 @@ html[lang="zh-hans"] .lang {
 }
 
 
-/* ===== HERO: desktop show middle / mobile show less extra ===== */
-
-/* Desktop: 维持你之前“中间内容显示更多”的观感 */
-.home-hero{
-  /* 让背景图按 cover 走，但构图居中 */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;   /* ✅ 关键：回到居中 */
-
-  position: relative;
-  color: #fff;
-
-  /* 仍然用 padding 撑高度（回到你之前更好的效果） */
-  padding: 160px 0 120px 0;
-}
-
-/* 遮罩保持 */
-.home-hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: rgba(0,0,0,0.45);
-}
-.home-hero .hero-content{
-  position: relative;
-  z-index: 1;
-
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0 24px;
-
-  /* 文字整体往下一点，别贴 Exit */
-  padding-top: 50px;
-}
-
-/* Mobile: 不让 hero 太高，裁掉上下多余部分 */
-@media (max-width: 640px){
-  .home-hero{
-    padding: 120px 0 90px 0;            /* ✅ 手机更矮 */
-    background-position: center 55%;     /* ✅ 手机往下看一点，少露上方天花板 */
-  }
-
-  .home-hero .hero-content{
-    padding: 0 20px;
-    padding-top: 40px;
-  }
-}
