@@ -395,9 +395,11 @@ html[lang="zh-hans"] .lang {
 
 /* ===== EN Home Hero Background Image ===== */
 
-/* ===== HERO: NEVER CROP IMAGE (NEW RATIO) ===== */
+/* ===== EN Home Hero Background Image ===== */
+/* ===== HERO: NEVER CROP IMAGE (NEW RATIO) + BLURRED SIDES ===== */
 
 .home-hero{
+  /* 顶层：清晰完整图（不裁切） */
   background-image: url("/assets/image/hero-home-en-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -411,32 +413,61 @@ html[lang="zh-hans"] .lang {
   position: relative;
   color: #fff;
 
-  /* 盖掉 .hero 的大 padding + 盖掉你前面 home-hero 的 padding */
   padding: 0 !important;
 
   display: flex;
   align-items: center;
+
+  /* ✅ 让模糊层不溢出 */
+  overflow: hidden;
+}
+
+/* ✅ 底层：同图铺满 + 模糊，填掉两侧“纯黑” */
+.home-hero::after{
+  content:"";
+  position:absolute;
+  inset:-20px; /* 给 blur 留边，避免露缝 */
+  background-image: url("/assets/image/hero-home-en-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  filter: blur(18px);
+  transform: scale(1.08);
+  opacity: 0.55;
+
+  z-index: 0;
+}
+
+/* ✅ 遮罩层：压在模糊层上面、文字下面 */
+.home-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.25);
+  z-index: 1;
 }
 
 @media (max-width: 768px){
   .home-hero{
     background-image: url("/assets/image/hero-home-en-mobile.jpg");
     background-position: center center;
-	height: auto;
-	aspect-ratio: 4/5;
+
+    /* 你现在手机这套保持不动 */
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  /* 手机如果你不想模糊层也用桌面图，就把它关掉（最省事、最稳） */
+  .home-hero::after{
+    display:none;
   }
 }
 
-.home-hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: rgba(0,0,0,0.25);
-}
-
+/* 文字层：最上面 */
 .home-hero .hero-content{
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: var(--container);
   margin: 0 auto;
   padding-left: var(--gutter);
