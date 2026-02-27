@@ -421,12 +421,8 @@ html[lang="zh-hans"] .lang {
 @media (max-width: 768px){
   .home-hero{
     background-image: url("/assets/image/hero-home-en-mobile.jpg");
-
-    /* ✅ 手机不留黑边：必须 cover */
-    background-size: cover;
-
-    /* ✅ 你可以微调这个百分比决定“裁上面多一点还是下面多一点” */
-    background-position: center 50%;
+    background-size: contain;
+    background-position: center center;
   }
 }
 
