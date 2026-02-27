@@ -315,10 +315,6 @@ html[lang="zh-hans"] .lang {
   border-top: 1px solid var(--line);
 }
 
-.home-hero{
-  padding: 150px 0 110px 0;
-  border-top: none;
-}
 
 /* 标题层级：更“高级”的节奏 */
 .section-title{
@@ -399,34 +395,29 @@ html[lang="zh-hans"] .lang {
 
 /* ===== EN Home Hero Background Image ===== */
 
-./* ===== HERO: NEVER CROP IMAGE (NEW RATIO) ===== */
+/* ===== HERO: NEVER CROP IMAGE (NEW RATIO) ===== */
 
 .home-hero{
-  background-image: url("../image/hero-home-en-desktop.jpg");
+  background-image: url("/assets/image/hero-home-en-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-
-  /* ✅ 永远完整显示图片 */
   background-size: contain;
 
-  /* ✅ 根据宽度自动计算高度（按 3024×1403 比例）
-     1403/3024 = 0.46397  → 46.397vw */
+  /* 1403/3024 = 0.46397 → 46.397vw */
   height: clamp(360px, 46.397vw, 650px);
 
-  /* contain 会产生空白，用黑色填充更自然 */
   background-color: #000;
 
   position: relative;
   color: #fff;
 
-  /* 覆盖 .hero 原有 padding */
+  /* 盖掉 .hero 的大 padding + 盖掉你前面 home-hero 的 padding */
   padding: 0 !important;
 
   display: flex;
   align-items: center;
 }
 
-/* 手机使用独立图片：你原来怎么写就先不动 */
 @media (max-width: 768px){
   .home-hero{
     background-image: url("/assets/image/hero-home-en-mobile.jpg");
@@ -435,7 +426,6 @@ html[lang="zh-hans"] .lang {
   }
 }
 
-/* 遮罩层：不动 */
 .home-hero::before{
   content:"";
   position:absolute;
@@ -443,7 +433,6 @@ html[lang="zh-hans"] .lang {
   background: rgba(0,0,0,0.45);
 }
 
-/* 文字层：不动 */
 .home-hero .hero-content{
   position: relative;
   z-index: 1;
