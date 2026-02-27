@@ -421,9 +421,8 @@ html[lang="zh-hans"] .lang {
 @media (max-width: 768px){
   .home-hero{
     background-image: url("/assets/image/hero-home-en-mobile.jpg");
-	background-size: contain;
-    background-position: top center;
-	min-height: auto;
+    background-position: center center;
+	height: auto;
 	aspect-ratio: 4/5;
   }
 }
