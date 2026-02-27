@@ -423,6 +423,7 @@ html[lang="zh-hans"] .lang {
     background-image: url("/assets/image/hero-home-en-mobile.jpg");
     background-size: 100% auto;
     background-position: top center;
+	height: auto;
   }
 }
 
