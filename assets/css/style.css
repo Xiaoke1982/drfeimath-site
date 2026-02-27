@@ -393,77 +393,44 @@ html[lang="zh-hans"] .lang {
 
 
 
-/* ===== EN Home Hero Background Image ===== */
+/* ===== EN Home Hero Background Image ===== */ /* ===== HERO: NEVER CROP IMAGE (NEW RATIO) ===== */ 
+.home-hero{ 
+	background-image: url("/assets/image/hero-home-en-desktop.jpg"); 
+	background-repeat: no-repeat; background-position: center center; 
+	background-size: contain; 
+	
+	/* 1403/3024 = 0.46397 → 46.397vw */ 
+	height: clamp(360px, 46.397vw, 650px); 
+	background-color: #000; 
+	position: relative; color: #fff; 
+	
+	/* 盖掉 .hero 的大 padding + 盖掉你前面 home-hero 的 padding */ 
+	padding: 0 !important; 
+	display: flex; 
+	align-items: center; 
+} 
 
-/* ===== HERO: Desktop soft blurred extension, mobile untouched ===== */
+@media (max-width: 768px){ 
+	.home-hero{ 
+		background-image: url("/assets/image/hero-home-en-mobile.jpg"); 
+		background-position: center center; 
+		height: auto; 
+		aspect-ratio: 4/5; 
+	} 
+} 
 
-.home-hero{
-  /* 保持你现在的高度策略 */
-  height: clamp(360px, 46.397vw, 650px);
+.home-hero::before{ 
+	content:""; 
+	position:absolute; 
+	inset:0; 
+	background: rgba(0,0,0,0.25); 
+} 
 
-  position: relative;
-  padding: 0 !important;
-
-  display: flex;
-  align-items: center;
-
-  overflow: hidden;
-}
-
-/* ===== Desktop only enhancement ===== */
-@media (min-width: 769px){
-
-  /* 桌面背景改成浅灰（高级感） */
-  .home-hero{
-    background: #f6f6f6;
-  }
-
-  /* 模糊延伸层（底层） */
-  .home-hero::after{
-    content:"";
-    position:absolute;
-    inset:-24px;
-
-    background-image: url("/assets/image/hero-home-en-desktop.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-
-    filter: blur(12px) saturate(1.2);
-    transform: scale(1.18);
-    opacity: 0.55;
-
-    z-index: 0;
-  }
-
-  /* 主图清晰层 */
-  .home-hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-
-    background-image: url("/assets/image/hero-home-en-desktop.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-
-    z-index: 1;
-  }
-
-  /* 文字层 */
-  .home-hero .hero-content{
-    position: relative;
-    z-index: 2;
-    text-shadow: 0 2px 18px rgba(0,0,0,0.35);
-  }
-}
-
-/* ===== Mobile stays exactly as you had it ===== */
-@media (max-width: 768px){
-  .home-hero{
-    background-image: url("/assets/image/hero-home-en-mobile.jpg");
-    background-position: center center;
-    height: auto;
-    aspect-ratio: 4/5;
-  }
+.home-hero .hero-content{ 
+	position: relative; 
+	z-index: 1; 
+	max-width: var(--container); 
+	margin: 0 auto; 
+	padding-left: var(--gutter); 
+	padding-right: var(--gutter); 
 }
