@@ -434,3 +434,11 @@ html[lang="zh-hans"] .lang {
 	padding-left: var(--gutter); 
 	padding-right: var(--gutter); 
 }
+
+
+.hero-line {
+  font-size: 24px;
+  color: #ffffff;
+  text-align: left;
+  margin: 8px 0;
+}
