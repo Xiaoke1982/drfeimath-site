@@ -423,7 +423,7 @@ html[lang="zh-hans"] .lang {
 	content:""; 
 	position:absolute; 
 	inset:0; 
-	background: rgba(0,0,0,0.25); 
+	background: rgba(0,0,0,0.1); 
 } 
 
 .home-hero .hero-content{ 
