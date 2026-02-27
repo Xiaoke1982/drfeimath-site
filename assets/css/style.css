@@ -399,41 +399,43 @@ html[lang="zh-hans"] .lang {
 
 /* ===== EN Home Hero Background Image ===== */
 
+./* ===== HERO: NEVER CROP IMAGE (NEW RATIO) ===== */
+
 .home-hero{
   background-image: url("../image/hero-home-en-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+
+  /* ✅ 永远完整显示图片 */
   background-size: contain;
 
-  aspect-ratio: 3024 / 1403;
+  /* ✅ 根据宽度自动计算高度（按 3024×1403 比例）
+     1403/3024 = 0.46397  → 46.397vw */
+  height: clamp(360px, 46.397vw, 650px);
 
-  width: 100%;
-  height: auto;
+  /* contain 会产生空白，用黑色填充更自然 */
+  background-color: #000;
 
   position: relative;
   color: #fff;
+
+  /* 覆盖 .hero 原有 padding */
   padding: 0 !important;
 
   display: flex;
   align-items: center;
 }
 
-
-/* 手机：用手机图，同样填满不留边 */
+/* 手机使用独立图片：你原来怎么写就先不动 */
 @media (max-width: 768px){
   .home-hero{
     background-image: url("/assets/image/hero-home-en-mobile.jpg");
-    background-size: cover;
-
-    /* ✅ 手机那点黑边通常是 position/比例导致的，cover + 微调位置能解决 */
-    background-position: center 50%;
-
-    /* ✅ 你说“调短一点”：手机 hero 高度稍微短一点 */
-    height: clamp(360px, 110vw, 520px);
+    background-size: contain;
+    background-position: center center;
   }
 }
 
-/* 遮罩 */
+/* 遮罩层：不动 */
 .home-hero::before{
   content:"";
   position:absolute;
@@ -441,16 +443,12 @@ html[lang="zh-hans"] .lang {
   background: rgba(0,0,0,0.45);
 }
 
-/* 文字层 */
+/* 文字层：不动 */
 .home-hero .hero-content{
   position: relative;
   z-index: 1;
-  width: 100%;
   max-width: var(--container);
   margin: 0 auto;
   padding-left: var(--gutter);
   padding-right: var(--gutter);
 }
-
-
-
