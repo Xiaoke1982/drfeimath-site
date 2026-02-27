@@ -429,9 +429,9 @@ html[lang="zh-hans"] .lang {
     background-position: center center;
     background-size: cover;
 
-    filter: blur(26px);
-    transform: scale(1.12);
-    opacity: 0.22;
+    filter: blur(12px) saturate(1.2);
+    transform: scale(1.18);
+    opacity: 0.55;
 
     z-index: 0;
   }
