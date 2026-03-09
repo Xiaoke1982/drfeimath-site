@@ -400,15 +400,11 @@ html[lang="zh-hans"] .lang {
   background-position: center center; 
   background-size: contain; 
   
-  /* 1403/3024 = 0.46397 → 46.397vw */ 
   height: clamp(360px, 46.397vw, 650px); 
   background-color: #000; 
   position: relative; 
   color: #fff; 
-  
   padding: 0 !important; 
-
-  /* ✅ 不再用 flex 居中（因为我们要左下定位） */
   display: block;
 } 
 
@@ -428,25 +424,21 @@ html[lang="zh-hans"] .lang {
   background: rgba(0,0,0,0.1); 
 } 
 
-/* ✅ 文字块：左下定位 + 小一点 + 不加大行距 */
 .home-hero .hero-content{ 
-  position: absolute;       /* 关键：从居中变成定位 */
-  left: 8%;
-  bottom: 12%;
+  position: absolute;
   z-index: 1; 
+  max-width: 520px; 
+  margin: 0; 
+  padding: 0;
 
-  max-width: 520px;         /* 文艺感：别太宽 */
-  margin: 0;                /* 不要 auto 居中 */
-  padding: 0;               /* 不要左右 gutter 推来推去 */
+  left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
+  bottom: 60px;
 } 
 
-/* ✅ 字：更小 + 间距不变大（更紧一点） + 极简对比增强 */
 .home-hero .hero-line{
-  font-size: 18px;                 /* 更小 */
-  margin: 4px 0;                   /* 行间距更紧（不是变大） */
+  font-size: 18px;
+  margin: 4px 0;
   letter-spacing: 0.02em;
   color: #fff;
-
-  /* 文艺但克制：轻微阴影提对比 */
   text-shadow: 0 1px 3px rgba(0,0,0,0.35);
 }
