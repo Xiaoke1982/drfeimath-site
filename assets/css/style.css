@@ -408,14 +408,23 @@ html[lang="zh-hans"] .lang {
   display: block;
 } 
 
-@media (max-width: 768px){ 
-  .home-hero{ 
-    background-image: url("/assets/image/hero-home-en-mobile.jpg"); 
-    background-position: center center; 
-    height: auto; 
-    aspect-ratio: 4/5; 
-  } 
-} 
+@media (max-width: 768px){
+  .home-hero{
+    background-image: url("/assets/image/hero-home-en-mobile.jpg");
+    background-position: center center;
+    height: auto;
+    aspect-ratio: 4/5;
+  }
+
+  .home-hero .hero-line{
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .home-hero .cta-btn{
+    font-size: 16px;
+  }
+}
 
 .home-hero::before{ 
   content:""; 
