@@ -472,6 +472,7 @@ html[lang="zh-hans"] .lang {
   .home-hero .hero-line{
 	  font-size: 14px;
 	  white-space: nowrap;
+	  font-weight: 600;
   }
 
   .home-hero .cta-btn{
