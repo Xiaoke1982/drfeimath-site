@@ -17,7 +17,6 @@ body {
 
 .nav { width: 100%; }
 
-/* 第一行：品牌 + 桌面导航 + 语言 */
 .nav-row {
   display: flex;
   justify-content: space-between;
@@ -32,7 +31,6 @@ body {
   flex-wrap: nowrap;
 }
 
-/* 品牌 */
 .brand {
   font-family: "Walter Turncoat", cursive;
   font-size: 34px;
@@ -41,9 +39,9 @@ body {
   font-weight: 400;
   text-decoration: none;
 }
+
 .brand:visited { color: #e8e8e8; }
 
-/* 桌面导航链接 */
 .desktop-links {
   display: flex;
   align-items: center;
@@ -59,7 +57,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* 语言 */
 .lang {
   color: #fff;
   font-size: 15px;
@@ -67,15 +64,14 @@ body {
   display: flex;
   gap: 6px;
   margin-right: 10px;
-
-  line-height: 18px;   /* ⭐ 锁住基线，防止上下跳 */
+  line-height: 18px;
 }
 
 .lang a {
   color: inherit;
   text-decoration: none;
   font-weight: 400;
-  display: inline-block;   /* ⭐ 让 line-height 生效更稳定 */
+  display: inline-block;
   line-height: 18px;
 }
 
@@ -90,14 +86,12 @@ body {
   text-underline-offset: 4px;
 }
 
-/* 导航区域统一行高，避免不同字体把黑条撑出差异 */
 .brand,
 .desktop-links a,
 .lang {
   line-height: 1;
 }
 
-/* 汉堡按钮（默认隐藏） */
 .nav-toggle {
   display: none;
   margin-top: 10px;
@@ -108,7 +102,6 @@ body {
   height: 36px;
   padding: 0;
   cursor: pointer;
-
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -122,7 +115,6 @@ body {
   border-radius: 2px;
 }
 
-/* 手机菜单 */
 .mobile-menu[hidden] { display: none; }
 
 .mobile-menu {
@@ -150,25 +142,6 @@ body {
   text-align: left;
 }
 
-.hero-content {
-  max-width: 720px;
-  margin-left: 8%;
-}
-
-.hero h1 {
-  font-size: 48px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  margin-bottom: 18px;
-}
-
-.hero h2 {
-  font-size: 20px;
-  font-weight: 400;
-  color: #555;
-  margin-bottom: 28px;
-}
-
 .hero:not(.home-hero) p {
   font-size: 16px;
   color: #777;
@@ -194,98 +167,63 @@ body {
   color: #fff;
 }
 
-@media (max-width: 640px) {
+/* ================= MOBILE HEADER ================= */
 
-  /* ✅ 手机端：别让 header 用 flex 锁死高度/对齐方式 */
+@media (max-width: 640px) {
   .site-header {
-    height: auto;            /* 允许展开 */
-    min-height: 72px;        /* 视觉上仍不矮于 72 */
+    height: auto !important;
+    min-height: 72px;
     padding: 12px 16px;
-    display: block;          /* 关键：别用 flex 顶着内容 */
+    display: block !important;
+    align-items: stretch !important;
+    position: relative !important;
+    z-index: 9999 !important;
   }
 
-  /* 桌面导航隐藏 */
   .desktop-links { display: none; }
 
-  /* ✅ 汉堡：就在品牌正下方，不下移 */
   .nav-toggle {
     display: inline-flex;
-    margin-top: 0;
+    margin-top: 0 !important;
+    position: relative !important;
+    z-index: 10001 !important;
   }
 
-  /* ✅ 菜单：正常排版在汉堡下面（不会盖住汉堡） */
-  .mobile-menu[hidden] { display: none; }
-
   .mobile-menu {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    padding: 0 24px;
+    position: relative !important;
+    z-index: 10000 !important;
     background: #000;
   }
 
   .hero { padding: 100px 20px; }
-  .hero-content { margin-left: 0; }
   .hero h1 { font-size: 36px; }
 }
 
-/* 中文 brand 使用 Long Cang */
+/* ================= CHINESE ================= */
+
 html[lang="zh-hans"] .brand {
   font-family: "Long Cang", cursive;
   font-size: 42px;
   letter-spacing: 2px;
 }
 
-/* 中文导航链接：ZCOOL KuaiLe + 小一点 + 底部对齐 */
 html[lang="zh-hans"] .desktop-links a {
   font-family: "ZCOOL KuaiLe", cursive;
-  font-size: 22px;          /* 小一点：你要更小就 16px */
+  font-size: 22px;
   letter-spacing: 1px;
 }
 
-/* 中文页：让品牌和导航在同一基线对齐 */
 html[lang="zh-hans"] .nav-row {
   align-items: baseline;
 }
 
-
-/* 中文页：压住字体把 header 撑高的问题，但不破坏 baseline 对齐 */
 html[lang="zh-hans"] .brand,
 html[lang="zh-hans"] .desktop-links a,
 html[lang="zh-hans"] .lang {
   line-height: 1;
 }
 
-
-/* ===== FIX: mobile menu should be above page, not overlapping header ===== */
-@media (max-width: 640px) {
-
-  /* 1) 手机端 header 不锁死高度 & 不用 flex（否则菜单溢出会乱叠） */
-  .site-header{
-    height: auto !important;
-    min-height: 72px;
-    display: block !important;
-    align-items: stretch !important;
-    position: relative !important;
-    z-index: 9999 !important; /* header 永远在最上面 */
-  }
-
-  /* 2) 菜单也要在最上层（否则会被正文盖住） */
-  .mobile-menu{
-    position: relative !important;
-    z-index: 10000 !important;
-    background: #000; /* 确保不透明 */
-  }
-
-  /* 3) 汉堡按钮保持可点 */
-  .nav-toggle{
-    position: relative !important;
-    z-index: 10001 !important;
-    margin-top: 0 !important;
-  }
-}
-
-/* ===== Homepage: visual design pass (no content changes) ===== */
+/* ================= HOMEPAGE BASE ================= */
 
 :root{
   --container: 860px;
@@ -295,28 +233,18 @@ html[lang="zh-hans"] .lang {
   --soft: #f6f6f6;
 }
 
-/* 统一版心：所有 section 都同一左边缘 */
-.section .container,
-.hero .hero-content{
+.section .container{
   max-width: var(--container);
   margin: 0 auto;
   padding-left: var(--gutter);
   padding-right: var(--gutter);
 }
 
-/* 取消 hero 原来 8% 的左缩进（保持同一版心） */
-.hero-content{
-  margin-left: auto !important;
-}
-
-/* 统一 section 节奏 */
 .section{
   padding: 84px 0;
   border-top: 1px solid var(--line);
 }
 
-
-/* 标题层级：更“高级”的节奏 */
 .section-title{
   font-size: 34px;
   letter-spacing: -0.3px;
@@ -330,7 +258,6 @@ html[lang="zh-hans"] .lang {
   margin: 0 0 18px 0;
 }
 
-/* Featured Courses 列表：去掉默认 bullet，做成干净列表 */
 .course-list{
   list-style: none;
   padding: 0;
@@ -344,7 +271,6 @@ html[lang="zh-hans"] .lang {
   font-size: 16px;
 }
 
-/* links：统一为黑色系，不要默认紫色 */
 .section-link{
   display: inline-block;
   margin-top: 18px;
@@ -359,7 +285,6 @@ html[lang="zh-hans"] .lang {
   border-bottom-color: rgba(0,0,0,0.7);
 }
 
-/* Testimonials：做成引用卡片，但保持极简 */
 .quotes{
   display: grid;
   gap: 22px;
@@ -385,21 +310,18 @@ html[lang="zh-hans"] .lang {
   font-size: 14px;
 }
 
-/* 交替轻灰背景：增强分区的“设计感” */
 .featured-courses,
 .testimonials{
   background: var(--soft);
 }
 
+/* ================= HOME HERO ================= */
 
-
-/* ===== EN Home Hero Background Image ===== */ /* ===== HERO: NEVER CROP IMAGE (NEW RATIO) ===== */ 
 .home-hero{ 
   background-image: url("/assets/image/hero-home-en-desktop.jpg"); 
   background-repeat: no-repeat; 
   background-position: center center; 
   background-size: contain; 
-  
   height: clamp(360px, 46.397vw, 650px); 
   background-color: #000; 
   position: relative; 
@@ -408,11 +330,10 @@ html[lang="zh-hans"] .lang {
   display: block;
 } 
 
-
 .home-hero::before{ 
-  content:""; 
-  position:absolute; 
-  inset:0; 
+  content: "";
+  position: absolute; 
+  inset: 0; 
   background: rgba(0,0,0,0.1); 
 } 
 
@@ -422,7 +343,6 @@ html[lang="zh-hans"] .lang {
   max-width: 520px; 
   margin: 0; 
   padding: 0;
-
   left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
   bottom: 60px;
 } 
@@ -432,14 +352,11 @@ html[lang="zh-hans"] .lang {
   font-size: 24px;
   margin: 4px 0;
   letter-spacing: 0.02em;
-
   color: #F2F8FF;
-
   text-shadow:
     0 0 2px #4AA3FF,
     0 0 6px rgba(74,163,255,0.8),
     0 2px 6px rgba(0,0,0,0.75);
-
   white-space: nowrap;
 }
 
@@ -458,7 +375,6 @@ html[lang="zh-hans"] .lang {
 }
 
 @media (max-width: 768px){
-
   .home-hero{
     background-image: url("/assets/image/hero-home-en-mobile.jpg");
     background-position: center center;
@@ -474,13 +390,12 @@ html[lang="zh-hans"] .lang {
   }
 
   .home-hero .hero-line{
-	  font-size: 16px;
-	  white-space: nowrap;
-	  font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+    font-weight: 600;
   }
 
   .home-hero .cta-btn{
-	  font-size: 22px;
+    font-size: 22px;
   }
-
 }
