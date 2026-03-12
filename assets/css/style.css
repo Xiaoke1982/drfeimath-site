@@ -321,6 +321,13 @@ html[lang="zh-hans"] .lang {
   margin-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
 }
 
+@media (max-width: 768px){
+  .featured-courses .container{
+    margin-left: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
 /* ================= HOME HERO ================= */
 
 .home-hero{ 
