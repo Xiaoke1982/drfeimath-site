@@ -432,11 +432,15 @@ html[lang="zh-hans"] .lang {
   font-size: 24px;
   margin: 4px 0;
   letter-spacing: 0.02em;
-  color: #CFE9FF;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.75);
-  
+
+  color: #F2F8FF;
+
+  text-shadow:
+    0 0 2px #4AA3FF,
+    0 0 6px rgba(74,163,255,0.8),
+    0 2px 6px rgba(0,0,0,0.75);
+
   white-space: nowrap;
-  
 }
 
 .home-hero .cta-btn{
@@ -470,7 +474,7 @@ html[lang="zh-hans"] .lang {
   }
 
   .home-hero .hero-line{
-	  font-size: 14px;
+	  font-size: 16px;
 	  white-space: nowrap;
 	  font-weight: 600;
   }
