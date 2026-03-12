@@ -241,7 +241,7 @@ html[lang="zh-hans"] .lang {
 }
 
 .section{
-  padding: 84px 0;
+  padding: 64px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -313,6 +313,12 @@ html[lang="zh-hans"] .lang {
 .featured-courses,
 .testimonials{
   background: var(--soft);
+}
+
+.featured-courses .container{
+  padding-left: 0;
+  padding-right: 24px;
+  margin-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
 }
 
 /* ================= HOME HERO ================= */
