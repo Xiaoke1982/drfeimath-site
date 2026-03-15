@@ -32,12 +32,24 @@
   {%- endif -%}
 
   <nav class="nav">
-    <!-- 第一行：左边品牌+（桌面导航），右边语言 -->
+
+    <!-- 第一行 -->
     <div class="nav-row">
+
+      <!-- 汉堡按钮（移动到这里） -->
+      <button class="nav-toggle"
+              type="button"
+              aria-controls="mobile-menu"
+              aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
       <div class="nav-left">
         <a href="{{ home | relative_url }}" class="brand">{{ t_brand }}</a>
 
-        <!-- 桌面显示 -->
+        <!-- 桌面导航 -->
         <div class="desktop-links">
           <a href="{{ courses | relative_url }}">{{ t_courses }}</a>
           <a href="{{ about | relative_url }}">{{ t_about }}</a>
@@ -47,24 +59,16 @@
         </div>
       </div>
 
-	  <div class="lang">
-	    <a href="{{ '/en/' | relative_url }}" class="{% if lang == 'en' %}is-active{% endif %}">EN</a>
-	    <span>|</span>
-	    <a href="{{ '/zh-hans/' | relative_url }}" class="{% if lang == 'zh-hans' %}is-active{% endif %}">中文</a>
-	  </div>
+      <!-- 语言 -->
+      <div class="lang">
+        <a href="{{ '/en/' | relative_url }}" class="{% if lang == 'en' %}is-active{% endif %}">EN</a>
+        <span>|</span>
+        <a href="{{ '/zh-hans/' | relative_url }}" class="{% if lang == 'zh-hans' %}is-active{% endif %}">中文</a>
+      </div>
+
     </div>
 
-    <!-- 第二行（手机才显示）：汉堡在品牌下方 -->
-    <button class="nav-toggle"
-            type="button"
-            aria-controls="mobile-menu"
-            aria-expanded="false">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-
-    <!-- 手机展开菜单 -->
+    <!-- 手机菜单 -->
     <div id="mobile-menu" class="mobile-menu" hidden>
       <a href="{{ courses | relative_url }}">{{ t_courses }}</a>
       <a href="{{ about | relative_url }}">{{ t_about }}</a>
@@ -72,5 +76,6 @@
       <a href="{{ qa | relative_url }}">{{ t_qa }}</a>
       <a href="{{ contact | relative_url }}">{{ t_contact }}</a>
     </div>
+
   </nav>
 </header>
