@@ -168,15 +168,14 @@ body {
 }
 
 @media (max-width: 640px) {
-
+	
   .site-header {
-    height: auto !important;
-    min-height: 72px;
-    padding: 12px 16px;
-    display: block !important;
-    align-items: stretch !important;
-    position: relative !important;
-    z-index: 9999 !important;
+	height: 56px;
+	padding: 0 16px;
+	display: flex !important;
+	align-items: center;
+	position: relative !important;
+	z-index: 9999 !important;
   }
 
   .desktop-links { display: none; }
