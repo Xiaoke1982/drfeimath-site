@@ -167,9 +167,8 @@ body {
   color: #fff;
 }
 
-/* ================= MOBILE HEADER ================= */
-
 @media (max-width: 640px) {
+
   .site-header {
     height: auto !important;
     min-height: 72px;
@@ -197,6 +196,33 @@ body {
 
   .hero { padding: 100px 20px; }
   .hero h1 { font-size: 36px; }
+
+
+  .nav-row{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .nav-left{
+    display: contents;
+  }
+
+  .brand{
+    grid-column: 2;
+    text-align: center;
+  }
+
+  .nav-toggle{
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .lang{
+    grid-column: 3;
+    justify-self: end;
+  }
+
 }
 
 /* ================= CHINESE ================= */
