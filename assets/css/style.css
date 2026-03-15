@@ -172,7 +172,7 @@ body {
   .site-header {
 	height: auto !important;
 	min-height: 52px;
-	padding: 12px 8px 6px 16px;
+	padding: 12px 2px 2px 10px;
 	display: block !important;
 	position: relative !important;
 	z-index: 9999 !important;
