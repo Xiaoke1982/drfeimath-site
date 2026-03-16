@@ -417,6 +417,10 @@ html[lang="zh-hans"] .lang {
   display: none;
 }
 
+.hero-desktop{
+  display: block;
+}
+
 @media (max-width: 768px){
   .home-hero{
     background-image: url("/assets/image/hero-home-en-mobile.jpg");
@@ -441,7 +445,7 @@ html[lang="zh-hans"] .lang {
   }
 
   .home-hero .hero-line{
-    font-size: 18px;
+    font-size: 20px;
     white-space: nowrap;
     font-weight: 600;
   }
