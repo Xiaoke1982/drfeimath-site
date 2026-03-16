@@ -432,6 +432,7 @@ html[lang="zh-hans"] .lang {
     font-size: 16px;
     white-space: nowrap;
     font-weight: 600;
+	transform: scaleY(1.08);
   }
 
   .home-hero .cta-btn{
