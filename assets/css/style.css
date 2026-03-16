@@ -1,456 +1,318 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #ffffff;
-  color: #111;
+/* =====================================================
+   GLOBAL
+   ===================================================== */
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  background:#fff;
+  color:#111;
 }
 
-/* ================= HEADER ================= */
 
-.site-header {
-  background: #000;
-  height: 72px;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
+/* =====================================================
+   HEADER (desktop)
+   ===================================================== */
+
+/* 整个顶部导航条 */
+
+.site-header{
+  background:#000;
+  height:72px;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
 }
 
-.nav { width: 100%; }
+.nav{width:100%;}
 
-.nav-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  width: 100%;
+/* 第一行结构：左边导航 + 右边语言 */
+
+.nav-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
 }
 
-.nav-left {
-  display: flex;
-  align-items: flex-end;
-  gap: 18px;
-  flex-wrap: nowrap;
+/* 左侧：品牌 + 桌面导航 */
+
+.nav-left{
+  display:flex;
+  align-items:flex-end;
+  gap:18px;
 }
 
-.brand {
-  font-family: "Walter Turncoat", cursive;
-  font-size: 34px;
-  color: #e8e8e8;
-  letter-spacing: -0.5px;
-  font-weight: 400;
-  text-decoration: none;
+/* 网站品牌 */
+
+.brand{
+  font-family:"Walter Turncoat",cursive;
+  font-size:34px;
+  color:#e8e8e8;
+  text-decoration:none;
+  line-height:1;
 }
 
-.brand:visited { color: #e8e8e8; }
+.brand:visited{color:#e8e8e8;}
 
-.desktop-links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  margin-left: 80px;
+/* 桌面端导航 */
+
+.desktop-links{
+  display:flex;
+  gap:28px;
+  margin-left:80px;
 }
 
-.desktop-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 22px;
-  font-family: "Indie Flower", cursive;
-  letter-spacing: 0.5px;
+.desktop-links a{
+  color:#fff;
+  text-decoration:none;
+  font-size:22px;
+  font-family:"Indie Flower",cursive;
 }
 
-.lang {
-  color: #fff;
-  font-size: 15px;
-  white-space: nowrap;
-  display: flex;
-  gap: 6px;
-  margin-right: 10px;
-  line-height: 18px;
+/* 语言切换 */
+
+.lang{
+  color:#fff;
+  font-size:15px;
+  display:flex;
+  gap:6px;
 }
 
-.lang a {
-  color: inherit;
-  text-decoration: none;
-  font-weight: 400;
-  display: inline-block;
-  line-height: 18px;
+.lang a{
+  color:inherit;
+  text-decoration:none;
 }
 
-.lang span {
-  opacity: 0.6;
-  display: inline-block;
-  line-height: 18px;
+.lang a.is-active{
+  text-decoration:underline;
 }
 
-.lang a.is-active {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+/* 汉堡按钮（桌面隐藏） */
+
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:10px;
+  width:44px;
+  height:36px;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
 }
 
-.brand,
-.desktop-links a,
-.lang {
-  line-height: 1;
+.nav-toggle .bar{
+  width:18px;
+  height:2px;
+  background:#fff;
 }
 
-.nav-toggle {
-  display: none;
-  margin-top: 10px;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.35);
-  border-radius: 10px;
-  width: 44px;
-  height: 36px;
-  padding: 0;
-  cursor: pointer;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
+/* 手机下拉菜单 */
+
+.mobile-menu[hidden]{display:none;}
+
+.mobile-menu{
+  display:flex;
+  flex-direction:column;
+  padding:0 24px;
+  background:#000;
 }
 
-.nav-toggle .bar {
-  width: 18px;
-  height: 2px;
-  background: #fff;
-  border-radius: 2px;
+.mobile-menu a{
+  color:#fff;
+  text-decoration:none;
+  padding:12px 0;
+  border-top:1px solid rgba(255,255,255,.12);
+  font-family:"Indie Flower",cursive;
 }
 
-.mobile-menu[hidden] { display: none; }
 
-.mobile-menu {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 0 24px;
-  background: #000;
+/* =====================================================
+   HERO (通用)
+   ===================================================== */
+
+.hero{
+  padding:140px 24px 120px;
 }
 
-.mobile-menu a {
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 0;
-  border-top: 1px solid rgba(255,255,255,0.12);
-  font-size: 18px;
-  font-family: "Indie Flower", cursive;
+.hero:not(.home-hero) p{
+  font-size:16px;
+  color:#777;
+  line-height:1.8;
 }
 
-/* ================= HERO ================= */
+/* 按钮 */
 
-.hero {
-  background: #ffffff;
-  padding: 140px 24px 120px 24px;
-  text-align: left;
+.cta-btn{
+  display:inline-block;
+  padding:10px 22px;
+  border:1px solid #111;
+  background:transparent;
+  color:#111;
+  text-decoration:none;
 }
 
-.hero:not(.home-hero) p {
-  font-size: 16px;
-  color: #777;
-  line-height: 1.8;
-  margin-bottom: 40px;
-  max-width: 520px;
+.cta-btn:hover{
+  background:#111;
+  color:#fff;
 }
 
-.cta-btn {
-  display: inline-block;
-  padding: 10px 22px;
-  border: 1px solid #111;
-  background: transparent;
-  color: #111;
-  text-decoration: none;
-  font-size: 13px;
-  letter-spacing: 1px;
-  transition: all 0.25s ease;
+
+/* =====================================================
+   HOMEPAGE HERO
+   ===================================================== */
+
+/* 首页大图 */
+
+.home-hero{
+  background:url("/assets/image/hero-home-en-desktop.jpg") center/contain no-repeat;
+  height:clamp(360px,46.397vw,650px);
+  background-color:#000;
+  position:relative;
+  color:#fff;
 }
 
-.cta-btn:hover {
-  background: #111;
-  color: #fff;
+/* 遮罩 */
+
+.home-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.1);
 }
 
-@media (max-width: 640px) {
-	
-  .site-header {
-	height: auto !important;
-	min-height: 52px;
-	padding: 12px 2px 2px 10px;
-	display: block !important;
-	position: relative !important;
-	z-index: 9999 !important;
-  }
+/* hero 文字位置 */
 
-  .desktop-links { display: none; }
-
-  .nav-toggle {
-    display: inline-flex;
-    margin-top: 0 !important;
-    position: relative !important;
-    z-index: 10001 !important;
-  }
-
-  .mobile-menu {
-    position: relative !important;
-    z-index: 10000 !important;
-    background: #000;
-  }
-
-  .hero { padding: 100px 20px; }
-  .hero h1 { font-size: 36px; }
-
-
-  .nav-row{
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-  }
-
-  .nav-left{
-    display: contents;
-  }
-
-  .brand{
-    grid-column: 2;
-    text-align: center;
-  }
-
-  .nav-toggle{
-    grid-column: 1;
-    justify-self: start;
-  }
-
-  .lang{
-    grid-column: 3;
-    justify-self: end;
-  }
-
+.home-hero .hero-content{
+  position:absolute;
+  max-width:520px;
+  left:calc((100% - (clamp(360px,46.397vw,650px)*2.155))/2 + 70px);
+  bottom:60px;
 }
 
-/* ================= CHINESE ================= */
-
-html[lang="zh-hans"] .brand {
-  font-family: "Long Cang", cursive;
-  font-size: 42px;
-  letter-spacing: 2px;
-}
-
-html[lang="zh-hans"] .desktop-links a {
-  font-family: "ZCOOL KuaiLe", cursive;
-  font-size: 22px;
-  letter-spacing: 1px;
-}
-
-html[lang="zh-hans"] .nav-row {
-  align-items: baseline;
-}
-
-html[lang="zh-hans"] .brand,
-html[lang="zh-hans"] .desktop-links a,
-html[lang="zh-hans"] .lang {
-  line-height: 1;
-}
-
-/* ================= HOMEPAGE BASE ================= */
-
-:root{
-  --container: 860px;
-  --gutter: 24px;
-  --muted: #666;
-  --line: rgba(0,0,0,0.08);
-  --soft: #f6f6f6;
-}
-
-.section .container{
-  max-width: var(--container);
-  margin: 0 auto;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-}
-
-.section{
-  padding: 50px 0;
-  border-top: 1px solid var(--line);
-}
-
-.section-title{
-  font-family: "Walter Turncoat", cursive;
-  font-size: 34px;
-  letter-spacing: -0.3px;
-  margin: 0 0 28px 0;
-}
-
-.section-text{
-  max-width: 680px;
-  color: var(--muted);
-  line-height: 1.85;
-  margin: 0 0 18px 0;
-}
-
-.course-list{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  max-width: 520px;
-}
-
-.course-list li{
-  padding: 12px 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 16px;
-}
-
-.section-link{
-  display: inline-block;
-  margin-top: 18px;
-  font-size: 15px;
-  color: #111;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,0.25);
-  padding-bottom: 2px;
-}
-
-.section-link:hover{
-  border-bottom-color: rgba(0,0,0,0.7);
-}
-
-.quotes{
-  display: grid;
-  gap: 22px;
-  max-width: 720px;
-}
-
-.quote{
-  margin: 0;
-  padding: 18px 18px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: #fff;
-}
-
-.quote p{
-  margin: 0 0 12px 0;
-  line-height: 1.75;
-  color: #222;
-}
-
-.quote footer{
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.featured-courses,
-.testimonials{
-  background: var(--soft);
-}
-
-.featured-courses .container{
-  padding-left: 0;
-  padding-right: 24px;
-  margin-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
-}
-
-@media (max-width: 768px){
-  .featured-courses .container{
-    margin-left: auto;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-/* ================= HOME HERO ================= */
-
-.home-hero{ 
-  background-image: url("/assets/image/hero-home-en-desktop.jpg"); 
-  background-repeat: no-repeat; 
-  background-position: center center; 
-  background-size: contain; 
-  height: clamp(360px, 46.397vw, 650px); 
-  background-color: #000; 
-  position: relative; 
-  color: #fff; 
-  padding: 0 !important; 
-  display: block;
-} 
-
-.home-hero::before{ 
-  content: "";
-  position: absolute; 
-  inset: 0; 
-  background: rgba(0,0,0,0.1); 
-} 
-
-.home-hero .hero-content{ 
-  position: absolute;
-  z-index: 1; 
-  max-width: 520px; 
-  margin: 0; 
-  padding: 0;
-  left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
-  bottom: 60px;
-} 
+/* 蓝色发光文字 */
 
 .home-hero .hero-line{
-  font-family: "Walter Turncoat", cursive;
-  font-size: 24px;
-  margin: 4px 0;
-  letter-spacing: 0.02em;
-  color: #F2F8FF;
+  font-family:"Walter Turncoat",cursive;
+  font-size:24px;
+  margin:4px 0;
+  color:#F2F8FF;
   text-shadow:
     0 0 2px #4AA3FF,
-    0 0 6px rgba(74,163,255,0.8),
-    0 2px 6px rgba(0,0,0,0.75);
-  white-space: nowrap;
+    0 0 6px rgba(74,163,255,.8),
+    0 2px 6px rgba(0,0,0,.75);
+  white-space:nowrap;
 }
 
+/* hero 按钮 */
+
 .home-hero .cta-btn{
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  background: rgba(0,0,0,0.25);
-  font-family: "Indie Flower", cursive;
-  font-size: 22px;
-  margin-top: 18px;
+  border:1px solid #fff;
+  color:#fff;
+  background:rgba(0,0,0,.25);
+  font-family:"Indie Flower",cursive;
+  font-size:22px;
+  margin-top:18px;
 }
 
 .home-hero .cta-btn:hover{
-  background: #ffffff;
-  color: #000000;
+  background:#fff;
+  color:#000;
 }
 
-.hero-mobile{
-  display: none;
-}
 
-.hero-desktop{
-  display: block;
-}
+/* =====================================================
+   DESKTOP / MOBILE TEXT SWITCH
+   ===================================================== */
 
-@media (max-width: 768px){
+/* 默认：桌面显示 desktop 文案 */
+
+.hero-desktop{display:block;}
+.hero-mobile{display:none;}
+
+
+/* =====================================================
+   MOBILE LAYOUT
+   ===================================================== */
+
+@media (max-width:768px){
+
+  /* 手机 hero 图片 */
+
   .home-hero{
-    background-image: url("/assets/image/hero-home-en-mobile.jpg");
-    background-position: center center;
-    height: auto;
-    aspect-ratio: 1213/1341;
+    background:url("/assets/image/hero-home-en-mobile.jpg") center/contain no-repeat;
+    height:auto;
+    aspect-ratio:1213/1341;
   }
 
-  .hero-desktop{
-    display: none;
-  }
+  /* 手机 hero 文字居中 */
 
-  .hero-mobile{
-    display: block;
-  }
-  
   .home-hero .hero-content{
-    left: 50%;
-    bottom: 12%;
-    transform: translateX(-50%);
-    text-align: center;
+    left:50%;
+    bottom:12%;
+    transform:translateX(-50%);
+    text-align:center;
   }
 
   .home-hero .hero-line{
-    font-size: 20px;
-    white-space: nowrap;
-    font-weight: 600;
+    font-size:20px;
+    font-weight:600;
   }
 
-  .home-hero .cta-btn{
-    font-size: 22px;
+  /* hero 文案切换 */
+
+  .hero-desktop{display:none;}
+  .hero-mobile{display:block;}
+
+}
+
+
+/* =====================================================
+   MOBILE HEADER
+   ===================================================== */
+
+@media (max-width:640px){
+
+  /* header 变成两行结构 */
+
+  .site-header{
+    min-height:52px;
+    padding:12px 2px 2px 10px;
+    display:block;
   }
+
+  /* 桌面导航隐藏 */
+
+  .desktop-links{display:none;}
+
+  /* 汉堡显示 */
+
+  .nav-toggle{display:inline-flex;}
+
+  /* header grid 布局 */
+
+  .nav-row{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
+  }
+
+  .nav-left{display:contents;}
+
+  .brand{
+    grid-column:2;
+    text-align:center;
+  }
+
+  .nav-toggle{
+    grid-column:1;
+    justify-self:start;
+  }
+
+  .lang{
+    grid-column:3;
+    justify-self:end;
+  }
+
 }
