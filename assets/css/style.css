@@ -413,6 +413,10 @@ html[lang="zh-hans"] .lang {
   color: #000000;
 }
 
+.hero-mobile{
+  display: none;
+}
+
 @media (max-width: 768px){
   .home-hero{
     background-image: url("/assets/image/hero-home-en-mobile.jpg");
@@ -421,6 +425,14 @@ html[lang="zh-hans"] .lang {
     aspect-ratio: 1213/1341;
   }
 
+  .hero-desktop{
+    display: none;
+  }
+
+  .hero-mobile{
+    display: block;
+  }
+  
   .home-hero .hero-content{
     left: 50%;
     bottom: 12%;
@@ -429,10 +441,9 @@ html[lang="zh-hans"] .lang {
   }
 
   .home-hero .hero-line{
-    font-size: 16px;
+    font-size: 18px;
     white-space: nowrap;
     font-weight: 600;
-	transform: scaleY(1.08);
   }
 
   .home-hero .cta-btn{
