@@ -362,6 +362,16 @@ html[lang="zh-hans"] .lang {
     padding-right: 24px;
   }
 }
+
+@media (max-width: 768px){
+  .who-am-i .container,
+  .testimonials .container,
+  .contact-summary .container{
+    margin-left: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
 /* ================= HOME HERO ================= */
 
 .home-hero{ 
