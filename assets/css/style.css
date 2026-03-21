@@ -349,7 +349,8 @@ html[lang="zh-hans"] .lang {
 
 .who-am-i .container,
 .testimonials .container,
-.contact-summary .container{
+.contact-summary .container
+.qa-preview .container{
   padding-left: 0;
   padding-right: 24px;
   margin-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
