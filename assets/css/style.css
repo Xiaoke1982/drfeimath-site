@@ -319,14 +319,14 @@ html[lang="zh-hans"] .lang {
 
 .quote{
   margin: 0;
-  padding: 18px 18px;
+  padding: 20px 20px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #fff;
 }
 
 .quote p{
-  margin: 0 0 12px 0;
+  margin: 0 0 14px 0;
   line-height: 1.75;
   color: #222;
 }
@@ -334,6 +334,50 @@ html[lang="zh-hans"] .lang {
 .quote footer{
   color: var(--muted);
   font-size: 14px;
+}
+
+.quote-meta{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.quote-stars{
+  color: #FBBC04;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.quote-source{
+  font-size: 12px;
+  color: #666;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.quote-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+}
+
+.quote-google-link{
+  color: #555;
+  text-decoration: none;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.quote-google-link:hover{
+  border-bottom-color: rgba(0,0,0,0.6);
 }
 
 .featured-courses,
