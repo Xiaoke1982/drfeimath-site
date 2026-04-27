@@ -468,29 +468,30 @@ html[lang="zh-hans"] .lang {
 .featured-courses-layout {
   display: flex;
   align-items: center;
-  width: 100%;
+  flex-wrap: nowrap;
+  padding-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
 }
 
 .featured-courses .container{
   flex-shrink: 0;
   padding-left: 0;
   padding-right: 24px;
-  margin-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
+  margin-left: 0;
   margin-right: 0;
 }
 
 .diploma-col {
   flex: 1;
+  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 40px;
-  min-width: 0;
+  padding: 0 40px 0 20px;
 }
 
 .diploma-img {
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
   box-shadow: 0 6px 28px rgba(0,0,0,0.18);
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 3px;
@@ -499,12 +500,13 @@ html[lang="zh-hans"] .lang {
 @media (max-width: 768px) {
   .featured-courses-layout {
     flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .diploma-col {
-    padding: 28px 24px 0 24px;
+    padding: 28px 0 0 0;
     width: 100%;
-    box-sizing: border-box;
   }
 
   .diploma-img {
