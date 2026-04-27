@@ -380,6 +380,86 @@ html[lang="zh-hans"] .lang {
   border-bottom-color: rgba(0,0,0,0.6);
 }
 
+.quote-date{
+  font-size: 12px;
+  color: #999;
+  margin-left: auto;
+  letter-spacing: 0.3px;
+}
+
+.quote-title{
+  margin: 0 0 8px 0 !important;
+  font-weight: 600;
+  color: #444;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.quote-original-zh{
+  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.85 !important;
+}
+
+.quote-translation{
+  border-top: 1px dashed rgba(0,0,0,0.12);
+  padding-top: 12px;
+  margin-top: 14px !important;
+  color: #555 !important;
+  font-size: 14px;
+  line-height: 1.7 !important;
+}
+
+.quote-translation em{
+  color: #888;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.testimonials-stats{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  margin: 0 0 28px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.stat-stars{
+  color: #FBBC04;
+  font-size: 22px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.stat-meta{
+  font-size: 14px;
+  color: #555;
+  letter-spacing: 0.3px;
+}
+
+.testimonials-page .quotes{
+  display: grid;
+  gap: 22px;
+  max-width: 720px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 480px){
+  .quote-meta{
+    flex-wrap: wrap;
+  }
+  .quote-date{
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
 .featured-courses,
 .testimonials{
   background: var(--soft);
