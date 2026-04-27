@@ -1,0 +1,50 @@
+<footer class="site-footer">
+  {% assign lang = page.lang | default: 'en' %}
+
+  {%- if lang == 'zh-hans' -%}
+    {% assign t_contact_heading = '联系方式' %}
+    {% assign t_email_label = '邮箱' %}
+    {% assign t_whatsapp_label = 'WhatsApp' %}
+    {% assign t_wechat_label = '微信' %}
+    {% assign t_follow_heading = '关注我' %}
+    {% assign t_xhs_label = '小红书' %}
+    {% assign t_ig_label = 'Instagram' %}
+    {% assign t_copyright = '© 2026 纽约费博士' %}
+  {%- else -%}
+    {% assign t_contact_heading = 'Contact' %}
+    {% assign t_email_label = 'Email' %}
+    {% assign t_whatsapp_label = 'WhatsApp' %}
+    {% assign t_wechat_label = 'WeChat' %}
+    {% assign t_follow_heading = 'Follow Me' %}
+    {% assign t_xhs_label = 'RED' %}
+    {% assign t_ig_label = 'Instagram' %}
+    {% assign t_copyright = '© 2026 Dr. Fei Math' %}
+  {%- endif -%}
+
+  <div class="footer-inner">
+    <div class="footer-cols">
+
+      <div class="footer-col">
+        <h3 class="footer-heading">{{ t_contact_heading }}</h3>
+        <ul class="footer-list">
+          <li>{{ t_email_label }}: <a href="mailto:info@drfeimath.com">info@drfeimath.com</a></li>
+          <li>{{ t_whatsapp_label }}: <a href="https://wa.me/16317428932" target="_blank" rel="noopener">+1 631-742-8932</a></li>
+          <li>{{ t_wechat_label }}: DeepBlueFXK</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">{{ t_follow_heading }}</h3>
+        <ul class="footer-list">
+          <li>{{ t_xhs_label }}: <a href="https://xhslink.com/m/AGQDgurn3l2" target="_blank" rel="noopener">@纽约费博士</a></li>
+          <li>{{ t_ig_label }}: <a href="https://instagram.com/dr.feimath" target="_blank" rel="noopener">Dr. Fei Math</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>{{ t_copyright }}</p>
+    </div>
+  </div>
+</footer>
