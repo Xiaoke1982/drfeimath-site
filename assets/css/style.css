@@ -480,13 +480,15 @@ html[lang="zh-hans"] .lang {
 .site-footer {
   background: #000;
   color: #e8e8e8;
-  padding: 56px 24px 24px 24px;
+  padding: 56px 0 24px 0;
   margin-top: 60px;
 }
 
 .footer-inner {
-  max-width: var(--container);
-  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 24px;
+  margin-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
+  margin-right: 0;
 }
 
 .footer-cols {
@@ -547,9 +549,19 @@ html[lang="zh-hans"] .footer-heading {
   color: #999;
 }
 
+@media (max-width: 768px) {
+  .footer-inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--container);
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 @media (max-width: 640px) {
   .site-footer {
-    padding: 40px 24px 20px 24px;
+    padding: 40px 0 20px 0;
     margin-top: 40px;
   }
 
