@@ -30,21 +30,28 @@ title: Home
     </div>
   </section>
 
-  <!-- 2) FEATURED COURSES (structure only) -->
+  <!-- 2) FEATURED COURSES -->
   <section class="section featured-courses">
-    <div class="container">
-      <h2 class="section-title">Featured Courses</h2>
+    <div class="featured-courses-layout">
+      <div class="container">
+        <h2 class="section-title">Featured Courses</h2>
 
-      <ul class="course-list">
-        <li>AP Calculus AB / BC</li>
-        <li>AP Precalculus</li>
-        <li>AP Statistics</li>
-        <li>AP Physics 1</li>
-        <li>Regents Algebra I &amp; II</li>
-      </ul>
+        <ul class="course-list">
+          <li>AP Calculus AB / BC</li>
+          <li>AP Precalculus</li>
+          <li>AP Statistics</li>
+          <li>AP Physics 1</li>
+          <li>Regents Algebra I &amp; II</li>
+        </ul>
 
-      <!-- style TBD later: link vs button -->
-      <a class="section-link" href="{{ '/en/courses/' | relative_url }}">View All Courses →</a>
+        <a class="section-link" href="{{ '/en/courses/' | relative_url }}">View All Courses →</a>
+      </div>
+
+      <div class="diploma-col">
+        <img src="{{ '/assets/image/phd-diploma.jpg' | relative_url }}"
+             alt="PhD Diploma – Doctor of Philosophy in Applied Mathematics and Statistics, Stony Brook University"
+             class="diploma-img">
+      </div>
     </div>
   </section>
 
