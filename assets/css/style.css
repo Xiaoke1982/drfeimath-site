@@ -652,7 +652,7 @@ html[lang="zh-hans"] .lang {
   background-image: url("/assets/image/hero-home-en-desktop.jpg"); 
   background-repeat: no-repeat; 
   background-position: center center; 
-  background-size: cover;
+  background-size: contain;
   height: clamp(360px, 46.397vw, 650px); 
   background-color: #000; 
   position: relative; 
