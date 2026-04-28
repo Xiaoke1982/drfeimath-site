@@ -470,6 +470,9 @@ html[lang="zh-hans"] .lang {
   align-items: center;
   flex-wrap: nowrap;
   padding-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
+  padding-right: 24px;
+  max-width: calc(clamp(360px, 46.397vw, 650px) * 1.4);
+  box-sizing: content-box;
 }
 
 .featured-courses .container{
@@ -502,6 +505,12 @@ html[lang="zh-hans"] .lang {
     flex-direction: column;
     padding-left: 24px;
     padding-right: 24px;
+    max-width: none;
+  }
+
+  .featured-courses .container,
+  .who-am-i .container {
+    max-width: var(--container);
   }
 
   .diploma-col {
@@ -556,6 +565,14 @@ html[lang="zh-hans"] .lang {
   align-items: center;
   flex-wrap: nowrap;
   padding-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
+  padding-right: 24px;
+  max-width: calc(clamp(360px, 46.397vw, 650px) * 1.4);
+  box-sizing: content-box;
+}
+
+.featured-courses .container,
+.who-am-i .container {
+  max-width: 480px;
 }
 
 .who-am-i-layout > .container {
@@ -580,6 +597,7 @@ html[lang="zh-hans"] .lang {
     flex-direction: column;
     padding-left: 24px;
     padding-right: 24px;
+    max-width: none;
   }
 
   .photo-col {
