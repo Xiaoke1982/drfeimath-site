@@ -47,7 +47,10 @@
       </button>
 
       <div class="nav-left">
-        <a href="{{ home | relative_url }}" class="brand">{{ t_brand }}</a>
+        <a href="{{ home | relative_url }}" class="brand">
+          <img src="{{ '/assets/image/logo.png' | relative_url }}" alt="Dr. Fei Math Logo" class="brand-logo">
+          {{ t_brand }}
+        </a>
 
         <!-- 桌面导航 -->
         <div class="desktop-links">
