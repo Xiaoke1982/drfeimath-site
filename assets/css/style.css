@@ -668,14 +668,24 @@ html[lang="zh-hans"] .lang {
   background: rgba(0,0,0,0.1); 
 } 
 
-.home-hero .hero-content{ 
+.home-hero .hero-content{
   position: absolute;
-  z-index: 1; 
-  max-width: 520px; 
-  margin: 0; 
+  z-index: 1;
+  margin: 0;
   padding: 0;
   left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
   bottom: 60px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-logo-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 50%;
+  opacity: 0.92;
 } 
 
 .home-hero .hero-line{
