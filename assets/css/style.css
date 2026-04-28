@@ -680,12 +680,15 @@ html[lang="zh-hans"] .lang {
   gap: 40px;
 }
 
-.hero-logo-img {
-  width: 140px;
-  height: 140px;
+.footer-logo {
+  display: block;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
   border-radius: 50%;
-  opacity: 0.92;
+  margin: 0 auto 12px auto;
+  filter: invert(1);
+  opacity: 0.75;
 } 
 
 .home-hero .hero-line{
