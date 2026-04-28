@@ -661,11 +661,26 @@ html[lang="zh-hans"] .lang {
   display: block;
 } 
 
-.home-hero::before{ 
+.home-hero::before{
   content: "";
-  position: absolute; 
-  inset: 0; 
-  background: rgba(0,0,0,0.1); 
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.1);
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #000 0%,
+    transparent 22%,
+    transparent 78%,
+    #000 100%
+  );
+  pointer-events: none;
+  z-index: 0;
 } 
 
 .home-hero .hero-content{
