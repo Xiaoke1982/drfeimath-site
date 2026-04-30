@@ -760,6 +760,101 @@ html[lang="zh-hans"] .lang {
   }
 }
 
+/* ================= ABOUT PAGE ================= */
+
+.about-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+}
+
+.about-h1 {
+  font-family: "Walter Turncoat", cursive;
+  font-size: 42px;
+  margin: 0 0 28px 0;
+}
+
+.about-h2 {
+  font-family: "Walter Turncoat", cursive;
+  font-size: 28px;
+  margin: 0 0 16px 0;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+
+.about-section {
+  margin-bottom: 48px;
+}
+
+.about-text {
+  color: var(--muted);
+  line-height: 1.85;
+  margin: 0 0 16px 0;
+}
+
+.approach-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  counter-reset: approach;
+}
+
+.approach-list li {
+  counter-increment: approach;
+  position: relative;
+  padding: 14px 0 14px 48px;
+  border-bottom: 1px solid var(--line);
+}
+
+.approach-list li::before {
+  content: counter(approach);
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 28px;
+  height: 28px;
+  background: #111;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.approach-list li strong {
+  display: block;
+  font-size: 15px;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.approach-list li span {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.about-diploma {
+  max-width: 480px;
+  margin: 28px 0 0 0;
+}
+
+.about-cta {
+  background: var(--soft);
+  padding: 32px;
+  border-radius: 8px;
+}
+
+@media (max-width: 640px) {
+  .about-page {
+    padding: 40px 20px 60px;
+  }
+  .about-h1 { font-size: 34px; }
+  .about-h2 { font-size: 24px; }
+}
+
 /* ================= FOOTER ================= */
 
 .site-footer {
