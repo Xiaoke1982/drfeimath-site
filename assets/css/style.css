@@ -307,6 +307,18 @@ html[lang="zh-hans"] .lang {
   font-size: 16px;
 }
 
+.course-list li a {
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease;
+}
+
+.course-list li a:hover {
+  border-bottom-color: rgba(0,0,0,0.7);
+}
+
 .section-link{
   display: inline-block;
   margin-top: 18px;
