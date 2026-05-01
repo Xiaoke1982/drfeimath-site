@@ -1,3 +1,31 @@
+{% assign lang = page.lang | default: 'en' %}
+
+{% if lang == 'zh-hans' %}
+<section class="section contact-form-section">
+  <div class="container">
+    <h2 class="section-title">给我留言</h2>
+    <p class="section-text">有问题想咨询，或者想预约免费评估？给我发消息，我会尽快回复。</p>
+
+    <form class="contact-form" action="https://formspree.io/f/xzdobyjy" method="POST">
+      <div class="form-group">
+        <label for="name-zh">姓名</label>
+        <input type="text" id="name-zh" name="name" placeholder="您的姓名" required>
+      </div>
+      <div class="form-group">
+        <label for="email-zh">邮箱</label>
+        <input type="email" id="email-zh" name="email" placeholder="您的邮箱地址" required>
+      </div>
+      <div class="form-group">
+        <label for="message-zh">留言</label>
+        <textarea id="message-zh" name="message" rows="5" placeholder="请告诉我孩子目前的年级、需要辅导的科目，以及您的问题或需求。" required></textarea>
+      </div>
+      <button type="submit" class="contact-submit">发送消息</button>
+      <a class="section-link" href="{{ '/zh-hans/contact/' | relative_url }}" style="display:inline-block; margin-top:16px;">更多联系方式 →</a>
+    </form>
+  </div>
+</section>
+
+{% else %}
 <section class="section contact-form-section">
   <div class="container">
     <h2 class="section-title">Leave a Message</h2>
@@ -21,3 +49,4 @@
     </form>
   </div>
 </section>
+{% endif %}

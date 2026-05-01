@@ -1,13 +1,67 @@
 ---
 layout: default
 lang: zh-hans
-title: 联系
+title: 联系我
 permalink: /zh-hans/contact/
 ---
 
-<main class="page">
-  <h1>联系</h1>
+<main class="about-page">
+  <h1 class="about-h1">联系我</h1>
 
-  <p>Email: info@drfeimath.com</p>
-  <p>纽约 · 线上授课</p>
+  <section class="about-section">
+    <p class="about-text">欢迎通过以下任何方式联系我，我很乐意解答您的问题、了解孩子的情况，或预约免费咨询。</p>
+  </section>
+
+  <!-- Contact Methods -->
+  <section class="about-section">
+    <h2 class="about-h2">联系方式</h2>
+
+    <div class="contact-methods">
+
+      <div class="contact-method">
+        <div class="contact-method-icon">✉️</div>
+        <div class="contact-method-body">
+          <h3 class="contact-method-title">邮箱</h3>
+          <p class="contact-method-text"><a href="mailto:info@drfeimath.com">info@drfeimath.com</a></p>
+          <p class="contact-method-note">通常在24小时内回复。</p>
+        </div>
+      </div>
+
+      <div class="contact-method">
+        <div class="contact-method-icon">💬</div>
+        <div class="contact-method-body">
+          <h3 class="contact-method-title">微信</h3>
+          <p class="contact-method-text">扫描二维码或搜索微信号</p>
+          <div class="qr-placeholder">[微信二维码]</div>
+        </div>
+      </div>
+
+      <div class="contact-method">
+        <div class="contact-method-icon">📕</div>
+        <div class="contact-method-body">
+          <h3 class="contact-method-title">小红书</h3>
+          <p class="contact-method-text">关注我或直接私信</p>
+          <div class="qr-placeholder">[小红书二维码]</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Free Evaluation -->
+  <section class="about-section">
+    <h2 class="about-h2">免费评估咨询</h2>
+    <p class="about-text">联系我之后，我们会先进行一次免费咨询——无需任何承诺。我会花时间了解孩子目前的水平、学习目标以及薄弱环节。</p>
+    <p class="about-text">在此基础上，我会给出客观评估，说明孩子目前所处的位置以及我能如何帮助。之后，我们共同决定是否开始合作。</p>
+  </section>
+
+  <!-- Availability -->
+  <section class="about-section">
+    <h2 class="about-h2">授课安排</h2>
+    <p class="about-text">我在纽约（东部时间），通过 Zoom 线上授课，每周七天均可安排，早、午、晚均有时段，可根据您的时区灵活调整。</p>
+    <p class="about-text">同时在罗斯福岛和曼哈顿上东区接受少量面授学生。</p>
+  </section>
+
 </main>
+
+{% include contact-form.html %}
