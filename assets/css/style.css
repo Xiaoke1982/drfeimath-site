@@ -500,6 +500,7 @@ html[lang="zh-hans"] .lang {
 
 .featured-courses .container{
   flex-shrink: 0;
+  width: 480px;
   padding-left: 0;
   padding-right: 24px;
   margin-left: 0;
@@ -613,7 +614,7 @@ html[lang="zh-hans"] .lang {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 70px 40px 0 20px;
+  padding: 85px 40px 0 20px;
 }
 
 @media (max-width: 768px) {
