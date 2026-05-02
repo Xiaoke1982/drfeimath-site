@@ -300,8 +300,8 @@ html[lang="zh-hans"] .lang {
 }
 
 .course-list{
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding: 0 0 0 20px;
   margin: 0;
   max-width: 520px;
 }
