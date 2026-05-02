@@ -611,9 +611,9 @@ html[lang="zh-hans"] .lang {
   flex: 1;
   min-width: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 40px 0 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 70px 40px 0 20px;
 }
 
 @media (max-width: 768px) {
