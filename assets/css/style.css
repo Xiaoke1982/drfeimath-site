@@ -1037,8 +1037,10 @@ html[lang="zh-hans"] .lang {
 
 .footer-cols {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: max-content max-content;
+  column-gap: 500px;
+  row-gap: 32px;
+  justify-content: start;
 }
 
 .footer-heading {
