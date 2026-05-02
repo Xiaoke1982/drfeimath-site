@@ -1039,8 +1039,6 @@ html[lang="zh-hans"] .lang {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  margin-bottom: 32px;
-  max-width: 640px;
 }
 
 .footer-heading {
@@ -1086,7 +1084,8 @@ html[lang="zh-hans"] .footer-heading {
   border-top: 1px solid rgba(255,255,255,0.15);
   padding-top: 20px;
   text-align: center;
-  max-width: 640px;
+  grid-column: 1 / -1;
+  margin-top: 32px;
 }
 
 .footer-bottom p {
