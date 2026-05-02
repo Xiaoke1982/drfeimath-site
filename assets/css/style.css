@@ -5,6 +5,11 @@ body {
   color: #111;
 }
 
+:root[lang="en"] body,
+html[lang="en"] body {
+  font-family: "Atma", cursive;
+}
+
 /* ================= HEADER ================= */
 
 .site-header {
@@ -579,10 +584,6 @@ html[lang="zh-hans"] .lang {
 
 .photo-col .framed-image {
   max-width: 300px;
-}
-
-.who-am-i .section-text {
-  font-family: "Atma", cursive;
 }
 
 /* ===== WHO AM I LAYOUT (left text + right photo) ===== */
