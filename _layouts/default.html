@@ -28,6 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Atma&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
 </head>
 
@@ -37,6 +38,11 @@
   {{ content }}
 
   {% include footer.html %}
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    GLightbox({ selector: '.glightbox' });
+  </script>
 
   <script>
     (function () {

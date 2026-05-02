@@ -573,6 +573,11 @@ html[lang="zh-hans"] .lang {
   border: 1px solid rgba(0,0,0,0.08);
 }
 
+.framed-image a {
+  display: block;
+  cursor: zoom-in;
+}
+
 .framed-image figcaption {
   text-align: center;
   font-size: 13px;
