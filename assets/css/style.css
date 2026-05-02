@@ -588,7 +588,11 @@ html[lang="zh-hans"] .lang {
 }
 
 .photo-col .framed-image {
-  max-width: 300px;
+  max-width: 380px;
+}
+
+.who-am-i .section-text {
+  font-size: 18px;
 }
 
 /* ===== WHO AM I LAYOUT (left text + right photo) ===== */
