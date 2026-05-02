@@ -1025,6 +1025,7 @@ html[lang="zh-hans"] .lang {
   color: #e8e8e8;
   padding: 56px 0 24px 0;
   margin-top: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 }
 
 .footer-inner {
@@ -1039,6 +1040,7 @@ html[lang="zh-hans"] .lang {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   margin-bottom: 32px;
+  max-width: 640px;
 }
 
 .footer-heading {
@@ -1084,6 +1086,7 @@ html[lang="zh-hans"] .footer-heading {
   border-top: 1px solid rgba(255,255,255,0.15);
   padding-top: 20px;
   text-align: center;
+  max-width: 640px;
 }
 
 .footer-bottom p {
