@@ -509,8 +509,9 @@ html[lang="zh-hans"] .lang {
   flex: 1;
   min-width: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-left: 20px;
   padding: 0 40px 0 20px;
 }
 
@@ -584,7 +585,7 @@ html[lang="zh-hans"] .lang {
 
 .who-am-i-layout {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
   padding-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
   padding-right: 24px;
