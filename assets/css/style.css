@@ -313,6 +313,11 @@ html[lang="zh-hans"] .lang {
   font-family: "Yatra One", cursive;
 }
 
+.qa-list li {
+  font-family: "Yatra One", cursive;
+  font-size: 19px;
+}
+
 .course-list li a,
 .qa-list li a {
   color: #111;
