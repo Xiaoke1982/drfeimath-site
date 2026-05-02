@@ -494,8 +494,6 @@ html[lang="zh-hans"] .lang {
   flex-wrap: nowrap;
   padding-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
   padding-right: 24px;
-  max-width: calc(clamp(360px, 46.397vw, 650px) * 1.4);
-  box-sizing: content-box;
 }
 
 .featured-courses .container{
