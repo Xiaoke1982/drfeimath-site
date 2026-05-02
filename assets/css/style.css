@@ -581,6 +581,10 @@ html[lang="zh-hans"] .lang {
   max-width: 300px;
 }
 
+.who-am-i .section-text {
+  font-family: "Atma", cursive;
+}
+
 /* ===== WHO AM I LAYOUT (left text + right photo) ===== */
 
 .who-am-i-layout {
