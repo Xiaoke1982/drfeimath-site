@@ -677,7 +677,8 @@ html[lang="zh-hans"] .lang {
 @media (max-width: 768px){
   .testimonials .container,
   .contact-summary .container,
-  .qa-preview .container{
+  .qa-preview .container,
+  .contact-form-section .container{
     margin-left: auto;
     padding-left: 24px;
     padding-right: 24px;
