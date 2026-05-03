@@ -665,14 +665,6 @@ html[lang="zh-hans"] .lang {
   margin-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
 }
 
-/* About-style pages: align contact form with page content */
-main.about-page + .contact-form-section .container {
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
-}
 
 @media (max-width: 768px){
   .featured-courses .container{
@@ -874,7 +866,8 @@ main.about-page + .contact-form-section .container {
 
 .about-page {
   max-width: 720px;
-  margin: 0 auto;
+  margin-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 46px);
+  margin-right: auto;
   padding: 60px 24px 80px;
 }
 
@@ -959,6 +952,7 @@ main.about-page + .contact-form-section .container {
 
 @media (max-width: 640px) {
   .about-page {
+    margin-left: auto;
     padding: 40px 20px 60px;
   }
   .about-h1 { font-size: 34px; }
