@@ -679,9 +679,13 @@ html[lang="zh-hans"] .lang {
   .contact-summary .container,
   .qa-preview .container,
   .contact-form-section .container{
-    margin-left: auto;
+    margin-left: 0;
+    margin-right: 0;
     padding-left: 24px;
     padding-right: 24px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 /* ================= HOME HERO ================= */
