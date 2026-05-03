@@ -843,7 +843,7 @@ html[lang="zh-hans"] .lang {
 }
 
 .contact-submit {
-  display: inline-block;
+  display: block;
   padding: 11px 28px;
   background: #111;
   color: #fff;
