@@ -825,7 +825,6 @@ html[lang="zh-hans"] .lang {
   border-radius: 4px;
   font-size: 15px;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  font-family: inherit;
   color: #111;
   background: #fff;
   transition: border-color 0.2s ease;
