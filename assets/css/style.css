@@ -481,6 +481,19 @@ html[lang="zh-hans"] .lang {
   letter-spacing: 0.3px;
 }
 
+.testimonials-page .container {
+  margin-left: calc((100% - (clamp(360px, 46.397vw, 650px) * 2.155)) / 2 + 70px);
+  padding-left: 0;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .testimonials-page .container {
+    margin-left: 0;
+    padding-left: 24px;
+  }
+}
+
 .testimonials-page .quotes{
   display: grid;
   gap: 22px;
