@@ -985,6 +985,25 @@ html[lang="zh-hans"] .lang {
   gap: 32px;
 }
 
+.contact-qr-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.contact-qr-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (max-width: 600px) {
+  .contact-qr-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 .contact-method {
   display: flex;
   gap: 20px;
