@@ -1042,6 +1042,15 @@ html[lang="zh-hans"] .lang {
   margin: 0;
 }
 
+.qr-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: block;
+}
+
 .qr-placeholder {
   display: inline-block;
   margin-top: 10px;
